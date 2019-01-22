@@ -1,7 +1,7 @@
 ﻿# Личный проект «Седона»
 
 * Студент: [Айгюль Гасымова](https://up.htmlacademy.ru/htmlcss/24/user/855555).
-* Наставник: [Ольга Вадясова] (https://htmlacademy.ru/profile/ad0v0).
+* Наставник: [Ольга Вадясова](https://htmlacademy.ru/profile/ad0v0).
 
 ---
 
