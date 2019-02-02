@@ -9,7 +9,7 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-logo" href="index.html">
-          <img src="img/mainLogo.svg" width="140" height="71" alt="City of Sedona">
+          <img src="img/svg/main-logo.svg" width="140" height="71" alt="Город Седона">
         </a>
         <ul class="main-navigation-list">
           <li><a href="#">Информация</a></li>
@@ -23,9 +23,70 @@
     <main>
       <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
 
-      <section class="filter">
+      <section class="search">
         <h2 class="visually-hidden">Фильтр жилья</h2>
-        <!--форма фильтра, пока не размечена-->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-checkboxes">
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li class="filter-checkbox">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="pool" id="pool" checked>
+                <label for="pool">Бассейн</label>
+              </li>
+              <li class="filter-checkbox">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li class="filter-checkbox">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="wifi" id="wifi">
+                <label for="wifi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-checkboxes">
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li class="filter-checkbox">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li class="filter-checkbox">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li class="filter-checkbox">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="apartments" id="apartments" checked>
+                <label for="apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <p class="filter-price">Стоимость в сутки (р):</p>
+          <!--Ползунок стоимости-->
+          <button class="filter-button button" type="submit">Показать</button>
+          <!--не уверена, относится ли сортировка к предыдущей форме или для неё нужна своя форма - пока сделала всё в одной--> 
+          <p>Найдено: 3</p>
+          <!--цифра 3 по идее должна быть не текстом, а каким-то изменяющимся значением, но я пока не поняла, как это лучше сделать-->
+          <fieldset class="sort-type">
+            <legend>Сортировка:</legend>
+              <ul>
+                <li class="filter-radio">
+                  <input class="filter-input filter-input-radio" type="radio" name="price" value="by-price" id="price" checked>
+                  <label for="price">По цене</label>
+                </li>
+                <li class="filter-radio">
+                  <input class="filter-input filter-input-radio" type="radio" name="type" value="by-type" id="type">
+                  <label for="type">По типу</label>
+                </li>
+                <li class="filter-radio">
+                  <input class="filter-input filter-input-radio" type="radio" name="type" value="by-rating" id="rating">
+                  <label for="rating">По рейтингу</label>
+                </li>
+              </ul>
+              <!--тут предполагается, что треугольники будут нарисованы в CSS, но не знаю, делать ли их кнопками или как-то ещё-->
+              <button class="sort-button button"></button>
+              <button class="sort-button button"></button>
+          </fieldset>
+        </form>
       </section>
         
       <section class="catalog">
@@ -35,13 +96,13 @@
             <h3>Amara Resort & SPA</h3>
             <p class="hotel-photo">
               <a href="#">
-                <img src="img/Amara.jpg" width="135" height="90" alt="Amara Resort & SPA">
+                <img src="img/jpg/Amara.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & SPA">
               </a>
             </p>
             <p class="hotel-description">
               <span>Гостиница</span>
               <span>От 4000р.</span>
-              <img src="img/iconStar.svg" width="18" height="17" alt="Пять звезд">
+              <img src="img//svg/icon-star.svg" width="18" height="17" alt="Звезда">
               <!--тут у всех пока по одной иконке со звездой, не уверена, как их лучше размножить - списком одинаковых изображений или через CSS как-то можно-->
               <span>Ретинг: 8,5</span>
             </p>
@@ -54,13 +115,13 @@
             <h3>Desert Quail Inn</h3>
             <p class="hotel-photo">
               <a href="#">
-                <img src="img/DesertQuailInn.jpg" width="135" height="90" alt="Desert Quail Inn">
+                <img src="img/jpg/Desert-Quail-Inn.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
               </a>
             </p>
             <p class="hotel-description">
               <span>Мотель</span>
               <span>От 3000р.</span>
-              <img src="img/iconStar.svg" width="18" height="17" alt="Три звезды">
+              <img src="img/svg/icon-star.svg" width="18" height="17" alt="Звезда">
               <span>Ретинг: 8,9</span>
             </p>
             <p class="hotel-book">
@@ -72,13 +133,13 @@
             <h3>Villas at Poco Diablo</h3>
             <p class="hotel-photo">
               <a href="#">
-                <img src="img/VillasPocoDiablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+                <img src="img/jpg/Villas-Poco-Diablo.jpg" width="135" height="90" alt="Фото апартаментов Villas at Poco Diablo">
               </a>
             </p>
             <p class="hotel-description">
               <span>Апартаменты</span>
               <span>От 2000р.</span>
-              <img src="img/iconStar.svg" width="18" height="17" alt="Две звезды">
+              <img src="img/svg/icon-star.svg" width="18" height="17" alt="Звезда">
               <span>Ретинг: 9,2</span>
             </p>
             <p class="hotel-book">
@@ -96,23 +157,23 @@
       <ul class="social">
         <li>
           <a class="social-button" href="#">
-            <img src="img/iconTwitter.svg" width="17" height="15" alt="Twitter">
+            <img src="img/svg/icon-Twitter.svg" width="17" height="15" alt="Седона в Твиттере">
           </a>
         </li>
         <li>
           <a class="social-button" href="#">
-            <img src="img/iconFacebook.svg" width="12" height="22" alt="Facebook">
+            <img src="img/svg/icon-Facebook.svg" width="12" height="22" alt="Седона в Фейсбуке">
           </a>
         </li>
         <li>
           <a class="social-button" href="#">
-            <img src="img/iconYoutube.svg" width="20" height="16" alt="YouTube">
+            <img src="img/svg/icon-Youtube.svg" width="20" height="16" alt="Седона на Ютубе">
           </a>
         </li>
       </ul>
       <p class="developer">Website by</p>
       <a class="developerLogo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logoAcademy.svg" width="115" height="41" alt="Website by HTMLacademy">
+        <img src="img/svg/logo-Academy.svg" width="115" height="41" alt="Сайт разработан HTMLacademy">
       </a>
     </footer>
 
