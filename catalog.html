@@ -30,15 +30,15 @@
             <legend>Инфраструктура:</legend>
             <ul>
               <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="pool" id="pool" checked>
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="pool" value="pool" checked>
                 <label for="pool">Бассейн</label>
               </li>
               <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="parking" value="parking">
                 <label for="parking">Парковка</label>
               </li>
               <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="wifi" id="wifi">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="wifi" value="wifi">
                 <label for="wifi">Wi-Fi</label>
               </li>
             </ul>
@@ -47,47 +47,55 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="hotel" value="hotel" checked>
                 <label for="hotel">Гостиница</label>
               </li>
               <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel" checked>
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="motel" value="motel" checked>
                 <label for="motel">Мотель</label>
               </li>
               <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="apartments" id="apartments" checked>
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="apartments" value="apartments" checked>
                 <label for="apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
-          <p class="filter-price">Стоимость в сутки (р):</p>
-          <!--Ползунок стоимости-->
+          <label for="">Стоимость в сутки (р):</label>
+          <p><span class="filter-cost">От 0</span><span class="filter-cost">До 3000</span></p>
+          <!-- Тут я поняла так, что нужно сделать два ползунка, регулирующих диапазон цены, + чтобы значения От и До менялись в зависимости от диапазона. Но пока не знаю, как это сделать-->
+          <input class="filter-input filter-input-range" type="range" name="range-cost" min="0" max="3000" step="600" value="2400">
           <button class="filter-button button" type="submit">Показать</button>
-          <!--не уверена, относится ли сортировка к предыдущей форме или для неё нужна своя форма - пока сделала всё в одной--> 
-          <p>Найдено: 3</p>
-          <!--цифра 3 по идее должна быть не текстом, а каким-то изменяющимся значением, но я пока не поняла, как это лучше сделать-->
-          <fieldset class="sort-type">
-            <legend>Сортировка:</legend>
-              <ul>
-                <li class="filter-radio">
-                  <input class="filter-input filter-input-radio" type="radio" name="price" value="by-price" id="price" checked>
-                  <label for="price">По цене</label>
-                </li>
-                <li class="filter-radio">
-                  <input class="filter-input filter-input-radio" type="radio" name="type" value="by-type" id="type">
-                  <label for="type">По типу</label>
-                </li>
-                <li class="filter-radio">
-                  <input class="filter-input filter-input-radio" type="radio" name="type" value="by-rating" id="rating">
-                  <label for="rating">По рейтингу</label>
-                </li>
-              </ul>
-              <!--тут предполагается, что треугольники будут нарисованы в CSS, но не знаю, делать ли их кнопками или как-то ещё-->
-              <button class="sort-button button"></button>
-              <button class="sort-button button"></button>
-          </fieldset>
         </form>
-      </section>
+      </section>  
+      
+      <section class="sort">
+        <p>Найдено: 3</p>
+        <p>Сортировка:</p>
+        <ul>
+          <li class="sort-list">
+            <a class="sort-criterion" href="#">по цене</a>
+          </li>
+          <li class="sort-list">
+            <a class="sort-criterion" href="#">по типу</a>
+          </li> 
+          <li class="sort-list">
+            <a class="sort-criterion" href="#">по рейтингу</a>
+          </li>               
+          </ul>
+        <!--тут я немного запуталась, делать эту сортировку тоже списком со ссылками или всё-таки кнопками, и оставила пока что оба варианта-->
+        <!--
+        <ul>
+          <li class="sort-order">
+            <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-up.svg" width="11" height="10" alt="Сортировка результатов поиска по возрастанию"></a>
+          </li>
+          <li class="sort-order">
+            <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-down.svg" width="11" height="10" alt="Сортировка результатов поиска по убыванию"></a>
+          </li>
+        </ul>
+        -->
+        <button class="sort-button button" aria-label="Сортировка результатов по возрастанию"><img src="/img/svg/icon-sort-up.svg" width="11" height="10"></button>
+        <button class="sort-button button" aria-label="Сортировка результатов по убыванию"><img src="/img/svg/icon-sort-down.svg" width="11" height="10"></button>
+      </section>  
         
       <section class="catalog">
         <h2 class="visually-hidden">Подходящее жилье</h2>
