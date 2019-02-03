@@ -1,189 +1,201 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Седона: гостиницы</title>
-  </head>
-  
-  <body>
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-logo" href="index.html">
-          <img src="img/svg/main-logo.svg" width="140" height="71" alt="Город Седона">
-        </a>
-        <ul class="main-navigation-list">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li class="main-navigation-link-current">Гостиницы</li>
-        </ul>
-      </nav>
-    </header>
-    
-    <main>
-      <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
 
-      <section class="search">
-        <h2 class="visually-hidden">Фильтр жилья</h2>
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="filter-checkboxes">
-            <legend>Инфраструктура:</legend>
-            <ul>
-              <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="pool" value="pool" checked>
-                <label for="pool">Бассейн</label>
-              </li>
-              <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="parking" value="parking">
-                <label for="parking">Парковка</label>
-              </li>
-              <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="wifi" value="wifi">
-                <label for="wifi">Wi-Fi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="filter-checkboxes">
-            <legend>Тип жилья:</legend>
-            <ul>
-              <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="hotel" value="hotel" checked>
-                <label for="hotel">Гостиница</label>
-              </li>
-              <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="motel" value="motel" checked>
-                <label for="motel">Мотель</label>
-              </li>
-              <li class="filter-checkbox">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="apartments" value="apartments" checked>
-                <label for="apartments">Апартаменты</label>
-              </li>
-            </ul>
-          </fieldset>
-          <label for="">Стоимость в сутки (р):</label>
-          <p><span class="filter-cost">От 0</span><span class="filter-cost">До 3000</span></p>
-          <!-- Тут я поняла так, что нужно сделать два ползунка, регулирующих диапазон цены, + чтобы значения От и До менялись в зависимости от диапазона. Но пока не знаю, как это сделать-->
-          <input class="filter-input filter-input-range" type="range" name="range-cost" min="0" max="3000" step="600" value="2400">
-          <button class="filter-button button" type="submit">Показать</button>
-        </form>
-      </section>  
-      
-      <section class="sort">
-        <p>Найдено: 3</p>
-        <p>Сортировка:</p>
-        <ul>
-          <li class="sort-list">
-            <a class="sort-criterion" href="#">по цене</a>
-          </li>
-          <li class="sort-list">
-            <a class="sort-criterion" href="#">по типу</a>
-          </li> 
-          <li class="sort-list">
-            <a class="sort-criterion" href="#">по рейтингу</a>
-          </li>               
+<head>
+  <meta charset="utf-8">
+  <title>Седона: гостиницы</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-logo" href="index.html">
+        <img src="img/svg/main-logo.svg" width="140" height="71" alt="Город Седона">
+      </a>
+      <ul class="main-navigation-list">
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li class="main-navigation-link-current">Гостиницы</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
+
+    <section class="search">
+      <h2 class="visually-hidden">Фильтр жилья</h2>
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="filter-checkboxes">
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li class="filter-checkbox">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="pool"
+                value="pool" checked>
+              <label for="pool">Бассейн</label>
+            </li>
+            <li class="filter-checkbox">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="parking"
+                value="parking">
+              <label for="parking">Парковка</label>
+            </li>
+            <li class="filter-checkbox">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-infrastructure" id="wifi"
+                value="wifi">
+              <label for="wifi">Wi-Fi</label>
+            </li>
           </ul>
-        <!--тут я немного запуталась, делать эту сортировку тоже списком со ссылками или всё-таки кнопками, и оставила пока что оба варианта-->
-        <!--
-        <ul>
-          <li class="sort-order">
-            <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-up.svg" width="11" height="10" alt="Сортировка результатов поиска по возрастанию"></a>
-          </li>
-          <li class="sort-order">
-            <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-down.svg" width="11" height="10" alt="Сортировка результатов поиска по убыванию"></a>
-          </li>
-        </ul>
-        -->
-        <button class="sort-button button" aria-label="Сортировка результатов по возрастанию"><img src="/img/svg/icon-sort-up.svg" width="11" height="10"></button>
-        <button class="sort-button button" aria-label="Сортировка результатов по убыванию"><img src="/img/svg/icon-sort-down.svg" width="11" height="10"></button>
-      </section>  
-        
-      <section class="catalog">
-        <h2 class="visually-hidden">Подходящее жилье</h2>
-        <ul class="catalog-info">
-          <li class="catalog-info-hotel">
-            <h3>Amara Resort & SPA</h3>
-            <p class="hotel-photo">
-              <a href="#">
-                <img src="img/jpg/Amara.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & SPA">
-              </a>
-            </p>
-            <p class="hotel-description">
-              <span>Гостиница</span>
-              <span>От 4000р.</span>
-              <img src="img//svg/icon-star.svg" width="18" height="17" alt="Звезда">
-              <!--тут у всех пока по одной иконке со звездой, не уверена, как их лучше размножить - списком одинаковых изображений или через CSS как-то можно-->
-              <span>Ретинг: 8,5</span>
-            </p>
-            <p class="hotel-book">
-              <a class="button button-more" href="#">Подробнее</a>
-              <a class="button button-book" href="#">Забронировать</a>
-            </p>
-          </li>
-          <li class="catalog-info-hotel">
-            <h3>Desert Quail Inn</h3>
-            <p class="hotel-photo">
-              <a href="#">
-                <img src="img/jpg/Desert-Quail-Inn.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
-              </a>
-            </p>
-            <p class="hotel-description">
-              <span>Мотель</span>
-              <span>От 3000р.</span>
-              <img src="img/svg/icon-star.svg" width="18" height="17" alt="Звезда">
-              <span>Ретинг: 8,9</span>
-            </p>
-            <p class="hotel-book">
-              <a class="button button-more" href="#">Подробнее</a>
-              <a class="button button-book" href="#">Забронировать</a>
-            </p>
-          </li>
-          <li class="catalog-info-hotel">
-            <h3>Villas at Poco Diablo</h3>
-            <p class="hotel-photo">
-              <a href="#">
-                <img src="img/jpg/Villas-Poco-Diablo.jpg" width="135" height="90" alt="Фото апартаментов Villas at Poco Diablo">
-              </a>
-            </p>
-            <p class="hotel-description">
-              <span>Апартаменты</span>
-              <span>От 2000р.</span>
-              <img src="img/svg/icon-star.svg" width="18" height="17" alt="Звезда">
-              <span>Ретинг: 9,2</span>
-            </p>
-            <p class="hotel-book">
-              <a class="button button-more" href="#">Подробнее</a>
-              <a class="button button-book" href="#">Забронировать</a>
-            </p>
-          </li>               
-        </ul>
-      </section>
-      
-    </main>
-    
-    <footer class="main-footer">
-      <p class="tag">#visitsedona</p>
-      <ul class="social">
-        <li>
-          <a class="social-button" href="#">
-            <img src="img/svg/icon-Twitter.svg" width="17" height="15" alt="Седона в Твиттере">
-          </a>
+        </fieldset>
+        <fieldset class="filter-checkboxes">
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li class="filter-checkbox">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="hotel"
+                value="hotel" checked>
+              <label for="hotel">Гостиница</label>
+            </li>
+            <li class="filter-checkbox">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="motel"
+                value="motel" checked>
+              <label for="motel">Мотель</label>
+            </li>
+            <li class="filter-checkbox">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="checkbox-accomodation" id="apartments"
+                value="apartments" checked>
+              <label for="apartments">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <label for="range-cost">Стоимость в сутки (р):</label>
+        <p><span class="filter-cost">От 0</span><span class="filter-cost">До 3000</span></p>
+        <!-- Тут я поняла так, что по идее нужно сделать два ползунка, регулирующих диапазон цены, + чтобы значения От и До менялись в зависимости от диапазона. Но по ТЗ вроде бы написано, что такое не требуется-->
+        <input class="filter-input filter-input-range" type="range" name="range-cost" min="0" max="3000" step="600" id="range-cost"
+          value="2400">
+        <button class="filter-button button" type="submit">Показать</button>
+      </form>
+    </section>
+
+    <section class="sort">
+      <h2 class="visually-hidden">Сортировка результатов</h2>
+      <p>Найдено: 3</p>
+      <p>Сортировка:</p>
+      <ul>
+        <li class="sort-list">
+          <a class="sort-criterion" href="#">по цене</a>
         </li>
-        <li>
-          <a class="social-button" href="#">
-            <img src="img/svg/icon-Facebook.svg" width="12" height="22" alt="Седона в Фейсбуке">
-          </a>
+        <li class="sort-list">
+          <a class="sort-criterion" href="#">по типу</a>
         </li>
-        <li>
-          <a class="social-button" href="#">
-            <img src="img/svg/icon-Youtube.svg" width="20" height="16" alt="Седона на Ютубе">
-          </a>
+        <li class="sort-list">
+          <a class="sort-criterion" href="#">по рейтингу</a>
         </li>
       </ul>
-      <p class="developer">Website by</p>
-      <a class="developerLogo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/svg/logo-Academy.svg" width="115" height="41" alt="Сайт разработан HTMLacademy">
-      </a>
-    </footer>
+      <!--тут я немного запуталась, делать эту сортировку тоже списком со ссылками или всё-таки кнопками, и оставила пока что оба варианта-->
+      <!--
+      <ul>
+        <li class="sort-order">
+          <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-up.svg" width="11" height="10" alt="Сортировка результатов поиска по возрастанию"></a>
+        </li>
+        <li class="sort-order">
+          <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-down.svg" width="11" height="10" alt="Сортировка результатов поиска по убыванию"></a>
+        </li>
+      </ul>
+      -->
+      <button class="sort-button button" aria-label="Сортировка результатов по возрастанию"><img src="/img/svg/icon-sort-up.svg"
+          width="11" height="10" alt="Сортировка результатов по возрастанию"></button>
+      <button class="sort-button button" aria-label="Сортировка результатов по убыванию"><img src="/img/svg/icon-sort-down.svg"
+          width="11" height="10" alt="Сортировка результатов по возрастанию"></button>
+    </section>
 
-  </body>
+    <section class="catalog">
+      <h2 class="visually-hidden">Подходящее жилье</h2>
+      <ul class="catalog-info">
+        <li class="catalog-info-hotel">
+          <h3>Amara Resort & SPA</h3>
+          <p class="hotel-photo">
+            <a href="#">
+              <img src="img/jpg/Amara.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & SPA">
+            </a>
+          </p>
+          <p class="hotel-description">
+            <span>Гостиница</span>
+            <span>От 4000р.</span>
+            <img src="img//svg/icon-star.svg" width="18" height="17" alt="Звезда">
+            <!--тут у всех пока по одной иконке со звездой, не уверена, как их лучше размножить - списком одинаковых изображений или через CSS как-то можно-->
+            <span>Ретинг: 8,5</span>
+          </p>
+          <p class="hotel-book">
+            <a class="button button-more" href="#">Подробнее</a>
+            <a class="button button-book" href="#">Забронировать</a>
+          </p>
+        </li>
+        <li class="catalog-info-hotel">
+          <h3>Desert Quail Inn</h3>
+          <p class="hotel-photo">
+            <a href="#">
+              <img src="img/jpg/Desert-Quail-Inn.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
+            </a>
+          </p>
+          <p class="hotel-description">
+            <span>Мотель</span>
+            <span>От 3000р.</span>
+            <img src="img/svg/icon-star.svg" width="18" height="17" alt="Звезда">
+            <span>Ретинг: 8,9</span>
+          </p>
+          <p class="hotel-book">
+            <a class="button button-more" href="#">Подробнее</a>
+            <a class="button button-book" href="#">Забронировать</a>
+          </p>
+        </li>
+        <li class="catalog-info-hotel">
+          <h3>Villas at Poco Diablo</h3>
+          <p class="hotel-photo">
+            <a href="#">
+              <img src="img/jpg/Villas-Poco-Diablo.jpg" width="135" height="90" alt="Фото апартаментов Villas at Poco Diablo">
+            </a>
+          </p>
+          <p class="hotel-description">
+            <span>Апартаменты</span>
+            <span>От 2000р.</span>
+            <img src="img/svg/icon-star.svg" width="18" height="17" alt="Звезда">
+            <span>Ретинг: 9,2</span>
+          </p>
+          <p class="hotel-book">
+            <a class="button button-more" href="#">Подробнее</a>
+            <a class="button button-book" href="#">Забронировать</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <p class="tag">#visitsedona</p>
+    <ul class="social">
+      <li>
+        <a class="social-button" href="#">
+          <img src="img/svg/icon-Twitter.svg" width="17" height="15" alt="Седона в Твиттере">
+        </a>
+      </li>
+      <li>
+        <a class="social-button" href="#">
+          <img src="img/svg/icon-Facebook.svg" width="12" height="22" alt="Седона в Фейсбуке">
+        </a>
+      </li>
+      <li>
+        <a class="social-button" href="#">
+          <img src="img/svg/icon-Youtube.svg" width="20" height="16" alt="Седона на Ютубе">
+        </a>
+      </li>
+    </ul>
+    <p class="developer">Website by</p>
+    <a class="developerLogo" href="https://htmlacademy.ru/intensive/htmlcss">
+      <img src="img/svg/logo-Academy.svg" width="115" height="41" alt="Сайт разработан HTMLacademy">
+    </a>
+  </footer>
+
+</body>
+
 </html>
