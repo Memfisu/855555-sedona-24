@@ -10,10 +10,10 @@
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-logo">
-        <img src="img/svg/main-logo.svg" width="140" height="71" alt="Город Седона">
+        <img src="img/svg/main-logo.svg" width="140" height="71" alt="Логотип" aria-label="Логтип Седоны">
       </a>
       <ul class="main-navigation-list">
-        <li class="main-navigation-link-current">Информация</li>
+        <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
         <li><a href="catalog.html">Гостиницы</a></li>
@@ -24,14 +24,14 @@
   <main class="main-content">
     <section class="introduction">
       <h1 class="visually-hidden">Седона</h1>
-      <img src="img/svg/main-Sedona.svg" width="459" height="353" alt="Добро пожаловать в великолепную Седону">
+      <img src="img/svg/main-Sedona.svg" width="459" height="353" alt="Приветственный текст" aria-label="Добро пожаловать в великолепную Седону">
       <p class="introduction-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
       <p class="introduction-text">Расмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     </section>
 
     <section class="features">
       <h2 class="visually-hidden">Преимущества Седоны</h2>
-      <img src="img/jpg/photo-house.jpg" width="800" height="256" alt="Фото дома">
+      <img src="img/jpg/photo-house.jpg" width="800" height="256" alt="Фотография" aria-label="Фото дома">
       <ul class="features-list">
         <li>
           <p class="features-title">Настоящий городок</p>
@@ -39,7 +39,8 @@
           <p class="features-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
         </li>
         <li>
-          <p class="features-title">Там есть мост дьявола</p>
+          <p class="features-title">Там есть<br>
+            мост дьявола</p>
           <p class="features-number">№2</p>
           <p class="features-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </li>
@@ -58,29 +59,31 @@
           <p class="features-number">№5</p>
           <p class="features-text">Большинство едет в Гранд Каньон и толпится там</p>
         </li>
+        <li>
+          <ul class="features-sub-list">
+            <li>
+              <!--иконки на мой взгляд не контентые, думаю можно добавить их в CSS-->
+              <p class="features-title">Жильё</p>
+              <p class="features-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </li>
+            <li>
+              <p class="features-title">Еда</p>
+              <p class="features-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li>
+              <p class="features-title">Сувениры</p>
+              <p class="features-text">Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
       </ul>
-      <ul class="features-sub-list">
-        <li>
-          <!--иконки на мой взгляд не контентые, думаю можно добавить их в CSS-->
-          <p class="features-title">Жильё</p>
-          <p class="features-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-        </li>
-        <li>
-          <p class="features-title">Еда</p>
-          <p class="features-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-        </li>
-        <li>
-          <p class="features-title">Сувениры</p>
-          <p class="features-text">Не только китайского, но и местного производства!</p>
-        </li>
-      </ul>
-      <img src="img/jpg/photo-Canyon.jpg" width="800" height="256" alt="Фото Гранд Каньона">
+      <img src="img/jpg/photo-Canyon.jpg" width="800" height="256" alt="Фото" aria-label="Фото Гранд Каньона">
     </section>
 
     <section class="visit">
       <h2 class="visually-hidden">Посетить Седону</h2>
       <p class="visit-title">Заинтересовались?</p>
-      <p class="visit-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="visit-text">Укажите предполагаемые даты поездки,<br>
+        и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="button-search button-brown button-search-change" href="form.html">Поиск гостиницы в Седоне</a>
       <!--вызов accomodation-search-->
       <!--карта на данной стадии картинкой-->
@@ -93,23 +96,23 @@
     <ul class="social">
       <li>
         <a class="social-button" href="#">
-          <img src="img/svg/icon-Twitter.svg" width="17" height="15" alt="Седона в Твиттере">
+          <img src="img/svg/icon-Twitter.svg" width="17" height="15" alt="Twitter" aria-label="Седона в Твиттере">
         </a>
       </li>
       <li>
         <a class="social-button" href="#">
-          <img src="img/svg/icon-Facebook.svg" width="12" height="22" alt="Седона в Фейсбуке">
+          <img src="img/svg/icon-Facebook.svg" width="12" height="22" alt="Facebook" aria-label="Седона в Фейсбуке">
         </a>
       </li>
       <li>
         <a class="social-button" href="#">
-          <img src="img/svg/icon-Youtube.svg" width="20" height="16" alt="Седона на Ютубе">
+          <img src="img/svg/icon-Youtube.svg" width="20" height="16" alt="YouTube" aria-label="Седона на Ютубе">
         </a>
       </li>
     </ul>
     <p class="developer">Website by
       <a class="developerLogo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/svg/logo-Academy-calm.svg" width="115" height="41" alt="Сайт разработан HTMLacademy">
+        <img src="img/svg/logo-Academy-calm.svg" width="115" height="41" alt="Логотип" aria-label="Логотип HTML Academy">
       </a>
     </p>
   </footer>
@@ -119,13 +122,12 @@
     <form class="search" method="post" action="https://echo.htmlacademy.ru">
       <p class="search-criterion">
         <label for="search-date-in">Дата заезда:</label>
-        <input id="search-date-in" type="date" name="date-in" value="">
+        <input id="search-date-in" type="text" name="date-in" placeholder="24 апреля 2017">
       </p>
       <p class="search-criterion">
         <label for="search-date-out">Дата выезда:</label>
-        <input id="search-date-out" type="date" name="date-out" value="">
+        <input id="search-date-out" type="text" name="date-out" placeholder="04 июля 2017">
       </p>
-      <!--через валидатор выяснила, что у date нельзя задать placeholder. Тогда пока непонятно, как сделать "24 апреля 2017" и прочее. Или на макете это просто демонстрация уже выбранных дат, а не подсказок?-->
       <p class="search-criterion">
         <label for="search-adults">Взрослые:</label>
         <input id="search-adults" type="number" name="adults" value="" placeholder="2">

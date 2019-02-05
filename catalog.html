@@ -10,7 +10,7 @@
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-logo" href="index.html">
-        <img src="img/svg/main-logo.svg" width="140" height="71" alt="Город Седона">
+        <img src="img/svg/main-logo.svg" width="140" height="71" alt="Логотип" aria-label="Логтип Седоны">
       </a>
       <ul class="main-navigation-list">
         <li><a href="#">Информация</a></li>
@@ -69,7 +69,6 @@
         </fieldset>
         <label for="range-cost">Стоимость в сутки (р):</label>
         <p><span class="filter-cost">От 0</span><span class="filter-cost">До 3000</span></p>
-        <!-- Тут я поняла так, что по идее нужно сделать два ползунка, регулирующих диапазон цены, + чтобы значения От и До менялись в зависимости от диапазона. Но по ТЗ вроде бы написано, что такое не требуется-->
         <input class="filter-input filter-input-range" type="range" name="range-cost" min="0" max="3000" step="600" id="range-cost"
           value="2400">
         <button class="filter-button button" type="submit">Показать</button>
@@ -91,21 +90,14 @@
           <a class="sort-criterion" href="#">по рейтингу</a>
         </li>
       </ul>
-      <!--тут я немного запуталась, делать эту сортировку тоже списком со ссылками или всё-таки кнопками, и оставила пока что оба варианта-->
-      <!--
       <ul>
         <li class="sort-order">
-          <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-up.svg" width="11" height="10" alt="Сортировка результатов поиска по возрастанию"></a>
+          <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-up.svg" width="11" height="10" alt="Треугольник, навправленный вверх" aria-label="Сортировка по возрастанию"></a>
         </li>
         <li class="sort-order">
-          <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-down.svg" width="11" height="10" alt="Сортировка результатов поиска по убыванию"></a>
+          <a class="sort-criterion" href="#"><img src="/img/svg/icon-sort-down.svg" width="11" height="10" alt="Треугольник, навправленный вниз" aria-label="Сортировка по убыванию"></a>
         </li>
       </ul>
-      -->
-      <button class="sort-button button" aria-label="Сортировка результатов по возрастанию"><img src="/img/svg/icon-sort-up.svg"
-          width="11" height="10" alt="Сортировка результатов по возрастанию"></button>
-      <button class="sort-button button" aria-label="Сортировка результатов по убыванию"><img src="/img/svg/icon-sort-down.svg"
-          width="11" height="10" alt="Сортировка результатов по возрастанию"></button>
     </section>
 
     <section class="catalog">
@@ -115,14 +107,13 @@
           <h3>Amara Resort & SPA</h3>
           <p class="hotel-photo">
             <a href="#">
-              <img src="img/jpg/Amara.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & SPA">
+              <img src="img/jpg/Amara.jpg" width="135" height="90" alt="Фотография" aria-label="Фото гостиницы Amara Resort & SPA">
             </a>
           </p>
           <p class="hotel-description">
             <span>Гостиница</span>
             <span>От 4000р.</span>
-            <img src="img//svg/icon-star.svg" width="18" height="17" alt="Звезда">
-            <!--тут у всех пока по одной иконке со звездой, не уверена, как их лучше размножить - списком одинаковых изображений или через CSS как-то можно-->
+            <span class="star" aria-label="4-х звездочный отель"></span>
             <span>Ретинг: 8,5</span>
           </p>
           <p class="hotel-book">
@@ -134,13 +125,13 @@
           <h3>Desert Quail Inn</h3>
           <p class="hotel-photo">
             <a href="#">
-              <img src="img/jpg/Desert-Quail-Inn.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
+              <img src="img/jpg/Desert-Quail-Inn.jpg" width="135" height="90" alt="Фотография" aria-label="Фото мотеля Desert Quail Inn">
             </a>
           </p>
           <p class="hotel-description">
             <span>Мотель</span>
             <span>От 3000р.</span>
-            <img src="img/svg/icon-star.svg" width="18" height="17" alt="Звезда">
+            <span class="star" aria-label="3-х звездочный отель"></span>
             <span>Ретинг: 8,9</span>
           </p>
           <p class="hotel-book">
@@ -152,13 +143,13 @@
           <h3>Villas at Poco Diablo</h3>
           <p class="hotel-photo">
             <a href="#">
-              <img src="img/jpg/Villas-Poco-Diablo.jpg" width="135" height="90" alt="Фото апартаментов Villas at Poco Diablo">
+              <img src="img/jpg/Villas-Poco-Diablo.jpg" width="135" height="90" alt="Фотография" aria-label="Фото апартаментов Villas at Poco Diablo">
             </a>
           </p>
           <p class="hotel-description">
             <span>Апартаменты</span>
             <span>От 2000р.</span>
-            <img src="img/svg/icon-star.svg" width="18" height="17" alt="Звезда">
+            <span class="star" aria-label="2-х звездочный отель"></span>
             <span>Ретинг: 9,2</span>
           </p>
           <p class="hotel-book">
@@ -176,23 +167,23 @@
     <ul class="social">
       <li>
         <a class="social-button" href="#">
-          <img src="img/svg/icon-Twitter.svg" width="17" height="15" alt="Седона в Твиттере">
+          <img src="img/svg/icon-Twitter.svg" width="17" height="15" alt="Twitter" aria-label="Седона в Твиттере">
         </a>
       </li>
       <li>
         <a class="social-button" href="#">
-          <img src="img/svg/icon-Facebook.svg" width="12" height="22" alt="Седона в Фейсбуке">
+          <img src="img/svg/icon-Facebook.svg" width="12" height="22" alt="Facebook" aria-label="Седона в Фейсбуке">
         </a>
       </li>
       <li>
         <a class="social-button" href="#">
-          <img src="img/svg/icon-Youtube.svg" width="20" height="16" alt="Седона на Ютубе">
+          <img src="img/svg/icon-Youtube.svg" width="20" height="16" alt="YouTube" aria-label="Седона на Ютубе">
         </a>
       </li>
     </ul>
     <p class="developer">Website by</p>
     <a class="developerLogo" href="https://htmlacademy.ru/intensive/htmlcss">
-      <img src="img/svg/logo-Academy-calm.svg" width="115" height="41" alt="Сайт разработан HTMLacademy">
+      <img src="img/svg/logo-Academy-calm.svg" width="115" height="41" alt="Логотип" aria-label="Логотип HTML Academy">
     </a>
   </footer>
 
