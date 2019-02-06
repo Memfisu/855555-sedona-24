@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f9fbf6;
+}
+
+.visually-hidden {
+	position: absolute
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+
+  background-color: #f9fbf6;
+}
+
+.main-navigation-list {
+  list-style: none;
+}
+
+.main-navigation-list a {
+  color: #000000;
+  }
+
+.main-navigation-list a:hover {
+  color: #81b3d2;
+}
+
+.main-navigation-list a:hover,
+.main-navigation-list a:focus {
+  color: #81b3d2;
+}
+
+.social {
+  list-style: none;
+}
+
+.introduction-title {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+}
+
+.introduction-text {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+.visit-title {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+}
+
+.visit-text {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+}
+
+.button-search {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border: none;
+  color: #ffffff;
+
+  background-color: #766357;
+}
+
+.button-search.button {
+  background-color: #81b3d2;
+}
+
+.search-criterion {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;   
+}
+
+.tag {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;    
+}
+
+.developerLogo {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+  
+    background-color: #f9fbf6;
+}
+
+
+.main-background {
+    background: url("../img/jpg/background-photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #d5b8a9;
+}
+
+.main-introduction {
+    background: url("../img/svg/main-polygon.svg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f9fbf6;
+}
