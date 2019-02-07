@@ -47,9 +47,13 @@ a {
   color: #81b3d2;
 }
 
-.main-navigation-list a:hover,
-.main-navigation-list a:focus {
-  color: #81b3d2;
+.main-navigation-list a:active {
+  color: #000000;
+  opacity: 30%;
+}
+
+.main-navigation-link-current {
+  color: #766357;
 }
 
 .social {
@@ -141,4 +145,120 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #f9fbf6;
+}
+
+.social-button {
+  vertical-align: middle;
+  border: none;
+  background-color: #81b3d2;
+}
+
+input[placeholder] {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+}
+
+.catalog-info {
+  list-style: none;
+}
+
+.catalog-info-hotel {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+}
+
+.hotel-description {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  color: #333333;
+}
+
+.button-more {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border: none;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.button-more:hover {
+  background-color: #669ec0;
+}
+
+.button-more:active {
+  background-color: #5496bd;
+  opacity: 30%;
+}
+
+.button-book:hover {
+  background-color: #604e43;
+}
+
+.button-more:active {
+  background-color: #503e33;
+  opacity: 30%;
+}
+
+.catalog-name {
+  color: #000000;
+  background-color: #f9fbf6;
+}
+
+.catalog-name:hover {
+  color: #81b3d2;
+}
+
+.catalog-name:active {
+  color: #000000;
+  opacity: 30%;
+}
+
+.button-book {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border: none;
+  color: #000000;
+
+  background-color: #766357;
+}
+
+.star {
+  content: url("../img/svg/icon-star.svg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f9fbf6;
+}
+
+.button-search:hover {
+  background-color: #669ec0;
+}
+
+.button-search:active {
+  background-color: #5496bd;
+  opacity: 30%;
+}
+
+.search-criterion input {
+  background-color: #f2f2f2;
+}
+
+.search-criterion input:focus {
+  background-color: #ebebeb;
+  border: 2px solid #e5e5e5;
 }
