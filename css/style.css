@@ -8,23 +8,26 @@ body {
   color: #000000;
   text-transform: uppercase;
 
-  background-color: #f9fbf6;
+  background-color: #ffffff;
 }
 
+/*спрятать скрытые заголовки*/
 .visually-hidden {
-	position: absolute
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0;
-	border: 0;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+  position: absolute clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
+/*убрать подчеркивание ссылок*/
 a {
   text-decoration: none;
 }
 
+/*главная страница*/
+/*текст главного меню*/
 .main-navigation {
   font-size: 14px;
   font-weight: bold;
@@ -32,34 +35,37 @@ a {
   text-align: center;
   color: #000000;
 
-  background-color: #f9fbf6;
+  background-color: #ffffff;
 }
 
-.main-navigation-list {
+/*убрать маркеры у ссылок*/
+.main-navigation-list,
+.social,
+.catalog-info {
   list-style: none;
 }
 
+/*изменить цвет для ссылок навигации*/
 .main-navigation-list a {
   color: #000000;
-  }
+}
 
+/*изменить цвет при наведении*/
 .main-navigation-list a:hover {
   color: #81b3d2;
 }
 
+/*изменить цвет при нажатии*/
 .main-navigation-list a:active {
-  color: #000000;
-  opacity: 30%;
+  color: rgba(0, 0, 0, 0.3);
 }
 
+/*изменить цвет у ссылки на текущую страницу*/
 .main-navigation-link-current {
   color: #766357;
 }
 
-.social {
-  list-style: none;
-}
-
+/*шрифт для "Седона - небольшой городок в Аризоне"*/
 .introduction-title {
   font-size: 21px;
   font-weight: bold;
@@ -68,6 +74,7 @@ a {
   color: #000000;
 }
 
+/*шрифт для "Рассмотри 5 причин"*/
 .introduction-text {
   font-size: 14px;
   line-height: 26px;
@@ -75,6 +82,7 @@ a {
   color: #333333;
 }
 
+/*шрифт для "Заинтересовались?"*/
 .visit-title {
   font-size: 30px;
   font-weight: bold;
@@ -83,6 +91,7 @@ a {
   color: #000000;
 }
 
+/*шрифт для "Укажите даты"*/
 .visit-text {
   font-size: 14px;
   line-height: 24px;
@@ -90,6 +99,7 @@ a {
   color: #333333;
 }
 
+/*кнопка "Поиск гостиницы в Седоне"*/
 .button-search {
   font-size: 21px;
   font-weight: bold;
@@ -103,57 +113,62 @@ a {
   background-color: #766357;
 }
 
+/*кнопка "Поиск гостиницы в Седоне" - наведение*/
+.button-search:hover {
+  background-color: #604e43;
+}
+
+/*кнопка "Поиск гостиницы в Седоне" - нажатие*/
+.button-search:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+/*кнопка "Найти"*/
 .button-search.button {
   background-color: #81b3d2;
 }
 
+/*кнопка "Найти" - наведение*/
+.button-search.button:hover {
+  background-color: #669ec0;
+}
+
+/*кнопка "Найти" - нажатие*/
+.button-search.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+/*шрифт для критериев поиска*/
 .search-criterion {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 26px;
-    text-align: center;
-    color: #000000;   
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
 }
 
-.tag {
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 26px;
-    text-align: center;
-    color: #000000;    
-}
-
-.developerLogo {
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-    color: #000000;
-  
-    background-color: #f9fbf6;
-}
-
-
-.main-background {
-    background: url("../img/jpg/background-photo.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #d5b8a9;
-}
-
-.main-introduction {
-    background: url("../img/svg/main-polygon.svg"); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #f9fbf6;
-}
-
-.social-button {
-  vertical-align: middle;
+/*фон для поля ввода критериев поиска*/
+.search-criterion input {
+  background-color: #f2f2f2;
   border: none;
-  background-color: #81b3d2;
 }
 
-input[placeholder] {
+/*фон и рамка для поля ввода критериев поиска - наведение*/
+.search-criterion input:hover {
+  background-color: #ebebeb;
+  border: none;
+}
+
+/*фон и рамка для поля ввода критериев поиска - фокус*/
+.search-criterion input:focus {
+  background-color: #ffffff;
+  outline: 2px solid #e5e5e5;
+}
+
+/*подсказки на форме поиска гостиниц*/
+.search-criterion input::placeholder {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
@@ -161,10 +176,62 @@ input[placeholder] {
   color: #000000;
 }
 
-.catalog-info {
-  list-style: none;
+/*шрифт для тега*/
+.tag {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
 }
 
+/*шрифт для логотипа Академии*/
+.developerLogo {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+/*страница гостиниц*/
+/*размытый фон*/
+.main-background {
+  background: url("../img/jpg/background-photo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d5b8a9;
+}
+
+/*зубчатый полигон на размытом фоне - его пока не видно, поэтому фон контрастный*/
+.main-introduction {
+  background: url("../img/svg/main-polygon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d5b8a9;
+}
+
+/*ссылки на соцсети*/
+.social-button {
+  vertical-align: middle;
+  border: none;
+  background-color: #81b3d2;
+}
+
+/*ссылки на соцсети - наведение*/
+.social-button:hover {
+  background-color: #669ec0;
+}
+
+/*ссылки на соцсети - нажатие*/
+.social-button:active {
+  background-color: #5496bd;
+}
+
+/*нужно ещё как-то по состоянию изменять цвет у символов соцсетей и цвет логотипа*/
+
+/*блок найденной гостиницы*/
 .catalog-info-hotel {
   font-size: 21px;
   font-weight: bold;
@@ -173,6 +240,7 @@ input[placeholder] {
   color: #000000;
 }
 
+/*описание гостиницы*/
 .hotel-description {
   font-size: 14px;
   line-height: 21px;
@@ -180,6 +248,7 @@ input[placeholder] {
   color: #333333;
 }
 
+/*кнопка "Подробнее"*/
 .button-more {
   font-size: 14px;
   font-weight: bold;
@@ -193,38 +262,18 @@ input[placeholder] {
   background-color: #81b3d2;
 }
 
+/*кнопка "Подробнее" - наведение*/
 .button-more:hover {
   background-color: #669ec0;
 }
 
+/*кнопка "Подробнее" - нажатие*/
 .button-more:active {
   background-color: #5496bd;
-  opacity: 30%;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.button-book:hover {
-  background-color: #604e43;
-}
-
-.button-more:active {
-  background-color: #503e33;
-  opacity: 30%;
-}
-
-.catalog-name {
-  color: #000000;
-  background-color: #f9fbf6;
-}
-
-.catalog-name:hover {
-  color: #81b3d2;
-}
-
-.catalog-name:active {
-  color: #000000;
-  opacity: 30%;
-}
-
+/*кнопка "Забронировать"*/
 .button-book {
   font-size: 14px;
   font-weight: bold;
@@ -233,32 +282,42 @@ input[placeholder] {
   text-transform: uppercase;
   vertical-align: middle;
   border: none;
-  color: #000000;
+  color: #ffffff;
 
   background-color: #766357;
 }
 
+/*кнопка "Забронировать" - наведение*/
+.button-book:hover {
+  background-color: #604e43;
+}
+
+/*кнопка "Забронировать" - нажатие*/
+.button-book:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*заголовки с названиями гостиниц*/
+.catalog-name {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*заголовки с названиями гостиниц - наведение*/
+.catalog-name:hover {
+  color: #81b3d2;
+}
+
+/*заголовки с названиями гостиниц - нажатие*/
+.catalog-name:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*звезда*/
 .star {
-  content: url("../img/svg/icon-star.svg"); 
+  content: url("../img/svg/icon-star.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #f9fbf6;
-}
-
-.button-search:hover {
-  background-color: #669ec0;
-}
-
-.button-search:active {
-  background-color: #5496bd;
-  opacity: 30%;
-}
-
-.search-criterion input {
-  background-color: #f2f2f2;
-}
-
-.search-criterion input:focus {
-  background-color: #ebebeb;
-  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
 }
