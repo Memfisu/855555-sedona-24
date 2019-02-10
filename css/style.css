@@ -38,11 +38,13 @@ a {
   background-color: #ffffff;
 }
 
-/*убрать маркеры у ссылок*/
+/*убрать маркеры и автоматические отступы у ссылок*/
 .main-navigation-list,
 .social,
 .catalog-info {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*изменить цвет для ссылок навигации*/
@@ -173,6 +175,7 @@ a {
   font-weight: bold;
   line-height: 26px;
   text-align: left;
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -232,7 +235,7 @@ a {
 /*нужно ещё как-то по состоянию изменять цвет у символов соцсетей и цвет логотипа*/
 
 /*блок найденной гостиницы*/
-.catalog-info-hotel {
+.catalog-info-hotel h3 {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -321,3 +324,47 @@ a {
   background-repeat: no-repeat;
   background-color: #ffffff;
 }
+
+/*alt от фотографий отелей*/
+.hotel-photo a {
+  color: #000000;
+}
+
+.hotel-photo a:hover {
+  color: #81b3d2;
+}
+
+.hotel-photo a:active {
+  color: #81b3d2;
+}
+
+.hotel-photo a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*alt от логотипа Академии*/
+.developer a {
+  color: #000000;
+}
+
+.developer a:hover {
+  color: #81b3d2;
+}
+
+.developer a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*alt от логотипа Седоны*/
+.main-navigation a {
+  color: #000000;
+}
+
+.main-navigation a:hover {
+  color: #81b3d2;
+}
+
+.main-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
