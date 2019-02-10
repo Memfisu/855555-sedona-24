@@ -39,8 +39,18 @@ a {
 }
 
 /*убрать маркеры и автоматические отступы у ссылок*/
-.main-navigation-list,
-.social,
+.main-navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-info {
   list-style: none;
   margin: 0;
@@ -67,6 +77,22 @@ a {
   color: #766357;
 }
 
+/*фоновая фотография*/
+.main-background {
+  background: url("../img/jpg/background-photo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d5b8a9;
+}
+
+/*зубчатый полигон на размытом фоне - его пока не видно, поэтому фон контрастный*/
+.main-introduction {
+  background: url("../img/svg/main-polygon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d5b8a9;
+}
+
 /*шрифт для "Седона - небольшой городок в Аризоне"*/
 .introduction-title {
   font-size: 21px;
@@ -76,10 +102,79 @@ a {
   color: #000000;
 }
 
-/*шрифт для "Рассмотри 5 причин"*/
+/*шрифт для "Рассмотрим 5 причин"*/
 .introduction-text {
   font-size: 14px;
   line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+/*убрать маркеры у причин"*/
+.features-list {
+  list-style: none;
+}
+
+.features-sub-list {
+  list-style: none;
+}
+
+/*шрифт для заголовка причин*/
+.features-list li:nth-of-type(1) .features-title,
+.features-list li:nth-of-type(2) .features-title {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.features-list li:nth-of-type(3) .features-title,
+.features-list li:nth-of-type(4) .features-title,
+.features-list li:nth-of-type(5) .features-title {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+}
+
+/*шрифт для номеров причин и самих причин */
+.features-list li:nth-of-type(1) .feature-content,
+.features-list li:nth-of-type(2) .feature-content {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.features-list li:nth-of-type(3) .feature-content,
+.features-list li:nth-of-type(4) .feature-content,
+.features-list li:nth-of-type(5) .feature-content {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+/*шрифт для трёх бонусных причин*/
+.features-sub-title {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+}
+
+.features-sub-content {
+  font-size: 14px;
+  line-height: 21px;
   text-align: center;
   color: #333333;
 }
@@ -198,21 +293,112 @@ a {
   background-color: #ffffff;
 }
 
+/*---------------------------*/
 /*страница гостиниц*/
 /*размытый фон*/
-.main-background {
-  background: url("../img/jpg/background-photo.jpg");
+.search {
+  background: url("../img/jpg/background-photo-blur.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-color: #d5b8a9;
 }
 
-/*зубчатый полигон на размытом фоне - его пока не видно, поэтому фон контрастный*/
-.main-introduction {
-  background: url("../img/svg/main-polygon.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #d5b8a9;
+/*названия критериев фильтрации*/
+.filter-checkboxes legend {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: left;
+  color: #ffffff;
+}
+
+label[for="range-cost"] {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: left;
+  color: #ffffff;
+}
+
+/*убрать маркеры у критериев фильтрации*/
+.filter-checkbox {
+    list-style: none;
+}
+
+/*критерии фильтрации*/
+.filter-checkboxes {
+  border: none;
+}
+
+.filter-checkboxes li label {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.filter-cost {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/*кнопка "Показать"*/
+.filter-button {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: transparent;
+  outline: 2px solid #ffffff;
+}
+
+/*сортировка*/
+.sort p:first-of-type {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+}
+
+.sort p:nth-of-type(2) {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  color: #000000;
+}
+
+.sort-list {
+  list-style: none;
+}
+
+.sort-list a:active {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  color: #81b3d2;
+  border-bottom: none;
+}
+
+.sort-list a {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dashed #81b3d2; 
+}
+
+/*изменить цвет у ссылки на текущую страницу*/
+.main-navigation-link-current {
+  color: #766357;
+}
+
+.sort-order {
+  list-style: none;
 }
 
 /*ссылки на соцсети*/
