@@ -9,15 +9,25 @@ body {
   text-transform: uppercase;
 
   background-color: #ffffff;
+  
 }
 
 /*спрятать скрытые заголовки*/
-.visually-hidden {
-  position: absolute clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
@@ -85,13 +95,6 @@ a {
   background-color: #d5b8a9;
 }
 
-/*зубчатый полигон на размытом фоне - его пока не видно, поэтому фон контрастный*/
-.main-introduction {
-  background: url("../img/svg/main-polygon.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #d5b8a9;
-}
 
 /*шрифт для "Седона - небольшой городок в Аризоне"*/
 .introduction-title {
@@ -120,8 +123,7 @@ a {
 }
 
 /*шрифт для заголовка причин*/
-.features-list li:nth-of-type(1) .features-title,
-.features-list li:nth-of-type(2) .features-title {
+.features-title-white {
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
@@ -131,9 +133,7 @@ a {
   background-color: #81b3d2;
 }
 
-.features-list li:nth-of-type(3) .features-title,
-.features-list li:nth-of-type(4) .features-title,
-.features-list li:nth-of-type(5) .features-title {
+.features-title {
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
@@ -312,7 +312,7 @@ a {
   color: #ffffff;
 }
 
-label[for="range-cost"] {
+.filter label {
   font-size: 16px;
   font-weight: bold;
   line-height: 21px;
@@ -330,7 +330,7 @@ label[for="range-cost"] {
   border: none;
 }
 
-.filter-checkboxes li label {
+.filter-checkboxes label {
   font-size: 14px;
   line-height: 21px;
   text-align: left;
@@ -554,3 +554,108 @@ label[for="range-cost"] {
   color: rgba(0, 0, 0, 0.3);
 }
 
+/*сетки*/
+body > * { background-color: rgba(255,0,0,0.5); } body > * > * { background-color: rgba(255,255,0,0.5); } body > * > * > * { background-color: rgba(0,255,0,0.5); } body > * > * > * { background-color: rgba(255,0,255,0.5); }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-navigation-list {
+  min-height: 56px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-navigation-list a {
+  display: block;
+  padding-left: 73px;
+  padding-right: 73px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  vertical-align: middle;
+}
+
+
+.main-logo {
+  position: absolute;
+  margin-left: -70px;
+  left: 50%;
+  top: 0;
+}
+
+.introduction img {
+  min-height: 353px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 76px;
+  padding-bottom: 80px;
+}
+
+.main-introduction::before {
+  content: "";
+  background: url("../img/svg/main-polygon.svg")no-repeat 0 0;
+background-size: cover;
+width: 50%;
+height: 86px;
+margin-top: auto;
+}
+
+.main-introduction {
+  background-color: #ffffff;
+  padding-bottom: 55px;
+  width: 576px;;
+  margin: 0 auto;
+}
+
+.introduction, .visit {
+  background-color: #ffffff;
+}
+
+.visit-container {
+  background-color: #ffffff;
+  padding-bottom: 85px;
+  padding-top: 20px;
+  width: 576px;;
+  margin: 0 auto;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+
+  background-color: #81b3d2;
+}
+
+.social {
+  display: flex;
+  width: 160px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-button:hover {
+  background-color: #669ec0;
+}
+
+.social-button:active {
+  background-color: #5496bd;
+}
+
+.social-button:hover path {
+  opacity: 0.3;
+}
