@@ -282,7 +282,7 @@ a {
   text-align: center;
   color: #000000;
 
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /*---------------------------*/
@@ -593,23 +593,20 @@ img {
   min-height: 773px;
 }
 
-/*
-welcome
-
-todo:
-чтобы блок с полигонами "заехал"
-на горы нужно сделать отрицательный отступ здесь.
-
-нам нужно чтобы он заехал целиком, вместе с полигонами
-
-*/
+/*welcome*/
 .introduction img {
   min-height: 353px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-top: 76px;
-  padding-bottom: -80px;
+}
+
+.introduction-background {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  min-height: 216px;
 }
 
 /*Седона - небольшой городок*/
@@ -620,8 +617,8 @@ todo:
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -237px;
-  vertical-align: middle;
+  margin-top: -250px;
+  min-height: 216px;
 }
 
 /*полигон*/
@@ -640,10 +637,13 @@ todo:
 
 .visit-container {
   background-color: #ffffff;
-  padding-bottom: 85px;
-  padding-top: 20px;
+  padding-bottom: 112px;
+  padding-top: 50px;
   width: 576px;;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 57px;
 }
 
 .social-button {
@@ -652,8 +652,6 @@ todo:
   justify-content: center;
   width: 46px;
   height: 48px;
-
-  background-color: #81b3d2;
 }
 
 .social {
@@ -665,9 +663,6 @@ todo:
   padding: 0;
 }
 
-.social-button:hover {
-  background-color: #669ec0;
-}
 
 .social-button:active {
   background-color: #5496bd;
@@ -675,4 +670,142 @@ todo:
 
 .social-button:hover path {
   opacity: 0.3;
+}
+
+.features-list {
+  min-height: 256px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.feature-item {
+  min-height: 256px;
+  width: 400px;
+}
+
+.features img:first-of-type {
+  display: block;
+  float: right;
+}
+
+.features img:last-of-type {
+  display: block;
+  float: left;
+}
+
+
+.main-footer {
+  margin-top: -165px;
+  background: rgba(255, 255, 255, 0.8);
+  width: 1200px;
+  
+  min-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  margin: 0;
+  min-height: 100px;
+  width: 136px;
+  margin-left: 132px;
+  padding-top: 51px;
+  padding-bottom: 53px;
+}
+
+.social {
+  margin: 0;
+  min-height: 100px;
+  width: 150px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.developer {
+  margin: 0;
+  min-height: 100px;
+  width: 197px;
+  margin-right: 101px;
+  padding-top: 39px;
+  padding-bottom: 40px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.developer span {
+  margin-top: 5px;
+}
+
+.accomodation-search {
+  background-color: #ffffff;
+
+  min-height: 395px;
+  width: 568px;
+
+  position: absolute;
+  margin-top: -640px;
+  left: 50%;
+  margin-left: -284px;
+  padding-top: 40px;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.search-criterion input {
+  width: 346px;
+  box-sizing: border-box;
+}
+
+.search-criterion label{
+  padding-right: 20px;
+}
+
+.search-criterion input[placeholder] {
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-left: 13px;
+}
+
+.search-criterion {
+  flex-basis: 478px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-form .button-search {
+  width: 458px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 55px;
+  margin-top: 54px;
+  padding-bottom: 22px;
+  padding-top: 10px;
+  display: block;
+}
+
+.visit {
+  margin: 0 auto;
+}
+
+.visit a {
+  margin-top: -86px;
+  margin-left: 316px;
+  margin-right: 316px;
+  width: 568px;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 30px;
 }
