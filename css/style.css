@@ -87,14 +87,6 @@ a {
   color: #766357;
 }
 
-/*фоновая фотография*/
-.main-background {
-  background: url("../img/jpg/background-photo.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #d5b8a9;
-}
-
 
 /*шрифт для "Седона - небольшой городок в Аризоне"*/
 .introduction-title {
@@ -579,8 +571,8 @@ img {
   display: block;
   padding-left: 73px;
   padding-right: 73px;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   vertical-align: middle;
 }
 
@@ -592,29 +584,54 @@ img {
   top: 0;
 }
 
+/*фоновая фотография*/
+.main-background {
+  background: url("../img/jpg/background-photo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d5b8a9;
+  min-height: 773px;
+}
+
+/*
+welcome
+
+todo:
+чтобы блок с полигонами "заехал"
+на горы нужно сделать отрицательный отступ здесь.
+
+нам нужно чтобы он заехал целиком, вместе с полигонами
+
+*/
 .introduction img {
   min-height: 353px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-top: 76px;
-  padding-bottom: 80px;
+  padding-bottom: -80px;
 }
 
+/*Седона - небольшой городок*/
+.main-introduction {
+  display: block;
+  background-color: #ffffff;
+  padding-top: 27px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -237px;
+  vertical-align: middle;
+}
+
+/*полигон*/
 .main-introduction::before {
   content: "";
-  background: url("../img/svg/main-polygon.svg")no-repeat 0 0;
-background-size: cover;
-width: 50%;
-height: 86px;
-margin-top: auto;
-}
-
-.main-introduction {
-  background-color: #ffffff;
-  padding-bottom: 55px;
-  width: 576px;;
-  margin: 0 auto;
+  background: url("../img/svg/main-polygon.svg") no-repeat 0 0;
+  background-size: cover;
+  width: 100%; 
+  height: 86px;
+  margin-top: auto;
 }
 
 .introduction, .visit {
