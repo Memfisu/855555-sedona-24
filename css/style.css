@@ -580,6 +580,7 @@ body > * > * > * {
 .container {
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 img {
@@ -714,18 +715,46 @@ img {
   opacity: 0.3;
 }
 
+/*временно вспомогательное*/
+.features {
+  height: 1097px;
+}
+
 .features-list {
   min-height: 256px;
   margin: 0;
   padding: 0;
 
   display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: column;
 }
 
 .feature-item {
   min-height: 256px;
-  width: 400px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
 }
+
+.features-group {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.features-sub-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
 
 .feature-image {
   width: 800px;
@@ -733,8 +762,7 @@ img {
 }
 
 .main-footer {
-  margin-top: -165px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   width: 1200px;
   
   min-height: 120px;
@@ -743,6 +771,12 @@ img {
 
   display: flex;
   justify-content: space-between;
+
+  position: relative;
+}
+
+.main {
+  margin-top: -120px;
 }
 
 .tag {
@@ -786,33 +820,21 @@ img {
   width: 568px;
 
   position: relative;
-  margin-top: -555px;
+  margin-top: -603px;
   left: 50%;
   margin-left: -284px;
   padding-top: 40px;
 }
 
 .search-criterion {
-  margin-left: 55px;
-  margin-right: 55px;
-  margin-bottom: 30px;
-}
-
-.criterion-counts {
-  display: flex;
-}
-
-.criterion-counts .search-criterion {
-  width: 200px;
+  flex-basis: 478px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .search-criterion input {
   width: 346px;
   box-sizing: border-box;
-}
-
-.search-criterion label{
-  padding-right: 20px;
 }
 
 .search-criterion input[placeholder] {
@@ -821,10 +843,19 @@ img {
   padding-left: 13px;
 }
 
-.search-criterion {
-  flex-basis: 478px;
-  margin-left: auto;
-  margin-right: auto;
+.search-criterion label{
+  padding-right: 20px;
+}
+
+.criterion-counts .search-criterion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.criterion-counts input {
+  width: 113px;
+  box-sizing: border-box;
 }
 
 .search-form .button-search {
@@ -850,4 +881,24 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 30px;
+}
+
+.search {
+  /*временно для сетки*/
+  height: 217px;
+}
+
+.filter {
+  display: flex;
+}
+
+.sort {
+  display: flex;
+  background-color: #ffffff;
+}
+
+.catalog-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
 }
