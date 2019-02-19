@@ -124,10 +124,6 @@ a {
   list-style: none;
 }
 
-.features-group  {
-  list-style: none;
-}
-
 /*шрифт для заголовка причин*/
 .features-title-white {
   font-size: 21px;
@@ -159,9 +155,14 @@ a {
 
 .features-group {
   font-size: 14px;
-  line-height: 21px;
   text-align: center;
   color: #333333;
+
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  
+  display: flex;
 
   background-color: #ffffff;
 }
@@ -739,22 +740,96 @@ img {
   flex-direction: row;
 }
 
-.features-group {
-  margin: 0;
-  padding: 0;
 
-  display: flex;
-  flex-direction: row;
+.feature-item:last-of-type {
+  order: 2;
+}
+
+.feature-item:nth-of-type(2) {
+  order: 3;
+}
+
+.feature-item:nth-of-type(3) {
+  order: 4;
 }
 
 .features-sub-list {
   margin: 0;
   padding: 0;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
+
+  background-color: #ffffff;
 }
 
+.features-sub-list li:first-of-type::before {
+  content: "";
+
+  position: absolute;
+  width: 75px;
+  height: 72px;
+  top: 1098px;
+  left: 510px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  background-color: #ffffff;
+
+  background-image: url("../img/svg/icon-house.svg"); 
+}
+
+.features-sub-list li:nth-of-type(2)::before {
+  content: "";
+
+  position: absolute;
+  width: 75px;
+  height: 72px;
+  top: 1098px;
+  left: 913px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  background-color: #ffffff;
+
+  background-image: url("../img/svg/icon-food.svg");
+  
+}
+
+.features-sub-list li:last-of-type::before {
+  content: "";
+
+  position: absolute;
+  width: 75px;
+  height: 72px;
+  top: 1098px;
+  left: 1320px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  background-color: #ffffff;
+
+  background-image: url("../img/svg/icon-gifts.svg");
+  
+}
+
+.features-sub-list li {
+  width: 284px;
+  padding-top: 141px;
+  flex-grow: 1;
+  margin-bottom: 71px;
+}
+
+.features-group .feature-item {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  
+  flex-direction: column;
+
+  background-color: #eeeeee;
+}
 
 .feature-image {
   width: 800px;
@@ -858,7 +933,7 @@ img {
   box-sizing: border-box;
 }
 
-.search-form .button-search {
+.accomodation-search .button-search {
   width: 458px;
   margin-left: auto;
   margin-right: auto;
@@ -873,7 +948,7 @@ img {
   margin: 0 auto;
 }
 
-.visit a {
+.accomodation-search a {
   margin-top: -86px;
   margin-left: 316px;
   margin-right: 316px;
