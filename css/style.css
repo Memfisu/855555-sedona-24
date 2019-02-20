@@ -836,6 +836,7 @@ img {
   min-height: 256px;
 }
 
+
 .main-footer {
   background: rgba(255, 255, 255, 0.9);
   width: 1200px;
@@ -891,20 +892,20 @@ img {
 .accomodation-search {
   background-color: #ffffff;
 
-  min-height: 395px;
+  min-height: 481px;
   width: 568px;
 
   position: relative;
-  margin-top: -603px;
+  margin-top: -690px;
   left: 50%;
   margin-left: -284px;
-  padding-top: 40px;
 }
 
 .search-criterion {
   flex-basis: 478px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .search-criterion input {
@@ -922,10 +923,20 @@ img {
   padding-right: 20px;
 }
 
-.criterion-counts .search-criterion {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.criterion-counts p:first-of-type{
+  display: block;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 50px;
+  margin-left: 55px;
+}
+
+.criterion-counts p:last-of-type {
+  display: block;
+  float: right;
+  margin-top: 0;
+  margin-bottom: 50px;
+  margin-right: 55px;
 }
 
 .criterion-counts input {
@@ -933,29 +944,25 @@ img {
   box-sizing: border-box;
 }
 
-.accomodation-search .button-search {
-  width: 458px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 55px;
-  margin-top: 54px;
-  padding-bottom: 22px;
-  padding-top: 10px;
-  display: block;
-}
-
 .visit {
   margin: 0 auto;
 }
 
-.accomodation-search a {
-  margin-top: -86px;
-  margin-left: 316px;
-  margin-right: 316px;
-  width: 568px;
+.accomodation-search .button-search {
+  width: 100%;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 29px;
+  margin-bottom: 52px;
+}
+
+.button-search.button {
+  width: 458px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 18px;
 }
 
 .search {
@@ -967,13 +974,70 @@ img {
   display: flex;
 }
 
-.sort {
-  display: flex;
-  background-color: #ffffff;
+.filter-checkboxes {
+  margin-top: 27px;
+  margin-left: 76px;
 }
 
+
+.filter-checkboxes ul {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+}
+
+.filter-cost-container {
+  margin-left: 364px;
+  margin-top: 30px;
+}
+
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+
+    /*временно для сетки*/
+    height: 86px;
+}
+
+.sort .sort-results {
+  margin-left: 72px;
+  margin-top: 31px;
+}
+
+.sort .sort-name {
+  margin-left: 49px;
+  margin-top: 35px;
+}
+
+.sort .sort-criteries {
+  display: flex;
+  margin-top: 27px;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.sort .sort-orders {
+  display: flex;
+  margin-top: 39px;
+  margin-left: 493px;
+}
+
+.sort-orders li {
+  padding-right: 12px;
+}
+
+
+
+.catalog {
+      /*временно для сетки*/
+      height: 455px;
+}
 .catalog-info {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
 }
+

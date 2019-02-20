@@ -71,19 +71,21 @@
               </li>
             </ul>
           </fieldset>
-          <label for="range-cost">Стоимость в сутки (р):</label>
-          <p><span class="filter-cost">От 0</span><span class="filter-cost">До 3000</span></p>
-          <input class="filter-input filter-input-range" type="range" name="range-cost" min="0" max="3000" step="600"
-            id="range-cost" value="2400">
-          <button class="filter-button button" type="submit">Показать</button>
+          <div class="filter-cost-container">
+            <label for="range-cost">Стоимость в сутки (р):</label>
+            <p><span class="filter-cost">От 0</span><span class="filter-cost">До 3000</span></p>
+            <input class="filter-input filter-input-range" type="range" name="range-cost" min="0" max="3000" step="600"
+              id="range-cost" value="2400">
+            <button class="filter-button button" type="submit">Показать</button>
+          </div>
         </form>
       </section>
 
       <section class="sort">
         <h2 class="visually-hidden">Сортировка результатов</h2>
-        <p>Найдено: 3</p>
-        <p>Сортировка:</p>
-        <ul>
+        <p class="sort-results">Найдено: 3</p>
+        <p class="sort-name">Сортировка:</p>
+        <ul class="sort-criteries">
           <li class="sort-list">
             <a class="sort-criterion" href="#">по цене</a>
           </li>
@@ -94,7 +96,7 @@
             <a class="sort-criterion" href="#">по рейтингу</a>
           </li>
         </ul>
-        <ul>
+        <ul class="sort-orders">
           <li class="sort-order">
             <a class="sort-criterion" href="#" aria-label="Сортировка по возрастанию"><img src="/img/svg/icon-sort-up.svg"
                 width="11" height="10" alt="Треугольник, направленный вверх"></a>
