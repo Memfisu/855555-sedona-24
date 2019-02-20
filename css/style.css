@@ -1029,7 +1029,38 @@ img {
   padding-right: 12px;
 }
 
+/* сюда программируй */
+.catalog-info-hotel {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: row; 
+}
 
+.hotel-photo {
+  margin-top: 30px;
+  margin-left: 73px;
+}
+
+.hotel-book .button {
+  width: 50%;
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  padding-left: 17px;
+}
+
+.hotel-book .button-more {
+  float: left;
+}
+
+.hotel-book .button-book {
+  float: right;
+}
+
+.catalog-ino-container {
+  width: 260px;
+}
 
 .catalog {
       /*временно для сетки*/
