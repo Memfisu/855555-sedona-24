@@ -341,23 +341,139 @@ a {
   color: #ffffff;
 }
 
-.filter-cost {
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
+.filter-cost-container {
   color: #ffffff;
+  margin-left: 364px;
+  margin-top: 30px;
+  width: 330px;
+  text-transform: uppercase;
 }
 
-/*кнопка "Показать"*/
-.filter-button {
-  font-size: 14px;
-  line-height: 21px;
-  text-align: left;
-  text-transform: uppercase;
-  color: #ffffff;
+.filter-cost-title {
+  margin-bottom: 9px;
 
-  background-color: transparent;
-  outline: 2px solid #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  font-weight: normal;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 /*сортировка*/
@@ -617,6 +733,10 @@ img {
   padding-right: 70px;
 }
 
+.main-navigation {
+  position: relative;
+}
+
 .main-logo {
   position: absolute;
   margin-left: -70px;
@@ -700,11 +820,11 @@ img {
   height: 48px;
 }
 
-.social-button:active {
+.social-button a:active {
   background-color: #5496bd;
 }
 
-.social-button:hover path{
+.social-button a:hover path{
   opacity: 0.3;
 }
 
@@ -752,9 +872,15 @@ img {
 
   display: flex;
   flex-direction: row;
+  position: relative;
 
   background-color: #ffffff;
 }
+
+.feature-container {
+    width: 400px;
+}
+
 
 .features-sub-list li:first-of-type::before {
   content: "";
@@ -762,8 +888,8 @@ img {
   position: absolute;
   width: 75px;
   height: 72px;
-  top: 1098px;
-  left: 510px;
+  top: 60px;
+  left: 165px;
   background-repeat: no-repeat;
   background-position: 0 0;
 
@@ -778,8 +904,8 @@ img {
   position: absolute;
   width: 75px;
   height: 72px;
-  top: 1098px;
-  left: 913px;
+  top: 60px;
+  left: 565px;
   background-repeat: no-repeat;
   background-position: 0 0;
 
@@ -795,8 +921,8 @@ img {
   position: absolute;
   width: 75px;
   height: 72px;
-  top: 1098px;
-  left: 1320px;
+  top: 60px;
+  left: 970px;
   background-repeat: no-repeat;
   background-position: 0 0;
 
@@ -872,12 +998,11 @@ img {
   margin-top: 5px;
 }
 
-/*что-то не то стало с логотипом - не отображается */
-.developer-logo:active path{
+.developer-logo:hover path{
   fill: #81b3d2;
 }
 
-.developer-logo:hover path{
+.developer-logo:active path{
   fill: #bdbbbc;
 }
 
@@ -887,8 +1012,8 @@ img {
   min-height: 481px;
   width: 568px;
 
-  position: relative;
-  margin-top: -690px;
+  position: absolute;
+  margin-top: -87px;
   left: 50%;
   margin-left: -284px;
 }
@@ -938,6 +1063,7 @@ img {
 
 .visit {
   margin: 0 auto;
+  position: relative;
 }
 
 .accomodation-search .button-search {
@@ -977,11 +1103,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 28px;
-}
-
-.filter-cost-container {
-  margin-left: 364px;
-  margin-top: 30px;
 }
 
 
@@ -1050,7 +1171,8 @@ img {
 
 /*звезда - не повторяется, регулировать количество шириной*/
 .catalog-raiting-container .star {
-  content: url("../img/svg/icon-star.svg");
+  background-image: url("../img/svg/icon-star.svg");
+  background-position: 0 0;
   background-repeat: repeat-x;
   background-size: contain;
   background-color: #ffffff;
