@@ -381,7 +381,7 @@ display: none;
   width: 25px;
   height: 23px;
 
-  background-image: url("../img/svg/checkbox.svg");
+  background-image: url("../img/svg/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -959,7 +959,7 @@ img {
 
   position: absolute;
   width: 75px;
-  height: 72px;
+  height: 77px;
   top: 60px;
   left: 970px;
   background-repeat: no-repeat;
@@ -1217,6 +1217,7 @@ img {
   padding-top: 4px;
   padding-bottom: 3px;
   padding-left: 17px;
+  padding-right: 17px;
 }
 
 .hotel-book .button-more {

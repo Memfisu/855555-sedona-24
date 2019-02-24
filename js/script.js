@@ -4,7 +4,7 @@ var link = document.querySelector(".button-search-change");
     var dateout = popup.querySelector("[name=date-out]");
     var adults = popup.querySelector("[name=adults]");
     var children = popup.querySelector("[name=children]");
-    var form = popup.querySelector("search-form");
+    var form = popup.querySelector(".search-form");
 
     var isStorageSupport = true;
   var storage = "";
