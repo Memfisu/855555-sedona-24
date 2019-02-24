@@ -327,6 +327,9 @@ a {
 /*убрать маркеры у критериев фильтрации*/
 .filter-checkbox {
     list-style: none;
+    margin-bottom: 23px;
+    padding-left: 34px;
+    position: relative;
 }
 
 /*критерии фильтрации*/
@@ -334,11 +337,53 @@ a {
   border: none;
 }
 
-.filter-checkboxes label {
+.filter-checkboxes fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.filter-checkbox label {
   font-size: 14px;
   line-height: 21px;
   text-align: left;
   color: #ffffff;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox:checked,
+.filter-input-checkbox {
+display: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 3;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid #ffffff;
+  border-radius: 10%;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  left: -4px;
+  top: 3;
+
+  width: 25px;
+  height: 23px;
+
+  background-image: url("../img/svg/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-cost-container {
@@ -526,6 +571,12 @@ a {
   vertical-align: middle;
   border: none;
   background-color: #81b3d2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
 }
 
 /*ссылки на соцсети - наведение*/
@@ -536,6 +587,15 @@ a {
 /*ссылки на соцсети - нажатие*/
 .social-button:active {
   background-color: #5496bd;
+}
+
+
+.social-button a:active {
+  background-color: #5496bd;
+}
+
+.social-button a:hover path{
+  opacity: 0.3;
 }
 
 /*блок найденной гостиницы*/
@@ -812,27 +872,6 @@ img {
   padding-bottom: 36px;
 }
 
-.social-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 48px;
-}
-
-.social-button a:active {
-  background-color: #5496bd;
-}
-
-.social-button a:hover path{
-  opacity: 0.3;
-}
-
-/*временно вспомогательное*/
-.features {
-  height: 1097px;
-}
-
 .features-list {
   min-height: 256px;
   margin: 0;
@@ -1036,24 +1075,15 @@ img {
   padding-left: 13px;
 }
 
-.search-criterion label{
+.search-criterion label {
   padding-right: 20px;
 }
 
-.criterion-counts p:first-of-type{
-  display: block;
-  float: left;
+.criterion-counts p{
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 50px;
   margin-left: 55px;
-}
-
-.criterion-counts p:last-of-type {
-  display: block;
-  float: right;
-  margin-top: 0;
-  margin-bottom: 50px;
-  margin-right: 55px;
 }
 
 .criterion-counts input {
@@ -1083,11 +1113,6 @@ img {
   padding-bottom: 18px;
 }
 
-.search {
-  /*временно для сетки*/
-  height: 217px;
-}
-
 .filter {
   display: flex;
 }
@@ -1097,22 +1122,19 @@ img {
   margin-left: 76px;
 }
 
-
 .filter-checkboxes ul {
   padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 28px;
+  margin: 0;
 }
 
+.filter-checkboxes ul:first-of-type {
+  margin-top: 17px;
+}
 
 .sort {
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
-
-    /*временно для сетки*/
-    height: 86px;
 }
 
 .sort .sort-results {
@@ -1156,7 +1178,7 @@ img {
 }
 
 .catalog-info-container {
-  width: 260px;
+  min-width: 260px;
   margin-left: 30px;
   margin-bottom: 20px;
 }
@@ -1171,6 +1193,8 @@ img {
 
 /*звезда - не повторяется, регулировать количество шириной*/
 .catalog-raiting-container .star {
+  content: "";
+
   background-image: url("../img/svg/icon-star.svg");
   background-position: 0 0;
   background-repeat: repeat-x;
@@ -1183,34 +1207,27 @@ img {
 .catalog-raiting-container .raiting {
   display: block;
   width: 110px;
-  height: 27px;
   background-color: #f2f2f2;
   padding-left: 16px;
   border: none;
 } 
 
+
 .hotel-book .button {
-  display: block;
   padding-top: 4px;
   padding-bottom: 3px;
   padding-left: 17px;
 }
 
 .hotel-book .button-more {
-  float: left;
   min-width: 110px;
 }
 
 .hotel-book .button-book {
-  float: right;
   margin-left: 6px;
   min-width: 142px;
 }
 
-.catalog {
-      /*временно для сетки*/
-      height: 455px;
-}
 .catalog-info {
   display: flex;
   flex-direction: column;
@@ -1219,4 +1236,8 @@ img {
 
 .hotel-description span {
   margin-right: 30px;
+}
+
+.modal-show {
+  display: none;
 }
