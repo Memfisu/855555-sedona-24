@@ -233,12 +233,19 @@ a {
 /*кнопка "Найти" - наведение*/
 .button-search.button:hover {
   background-color: #669ec0;
+  cursor: pointer;
 }
 
 /*кнопка "Найти" - нажатие*/
 .button-search.button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
+  cursor: pointer;
+}
+
+.button-search.button:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 /*шрифт для критериев поиска*/
@@ -517,8 +524,15 @@ display: none;
 
 .btn-transparent:hover {
   color: #000000;
-
   background: #ffffff;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.btn-transparent:focus,
+.btn-transparent:active {
+  outline: 0;
+  outline-offset: 0;
 }
 
 /*сортировка*/
@@ -632,13 +646,22 @@ display: none;
 /*кнопка "Подробнее" - наведение*/
 .button-more:hover {
   background-color: #669ec0;
+  outline: 0;
+  outline-offset: 0;
 }
 
 /*кнопка "Подробнее" - нажатие*/
 .button-more:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+  outline-offset: 0;
 }
+
+.button-more:focus {
+  outline: 0;
+  outline-offset: 0;
+  }
 
 /*кнопка "Забронировать"*/
 .button-book {
@@ -657,12 +680,21 @@ display: none;
 /*кнопка "Забронировать" - наведение*/
 .button-book:hover {
   background-color: #604e43;
+  outline: 0;
+  outline-offset: 0;
 }
 
 /*кнопка "Забронировать" - нажатие*/
 .button-book:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+  outline-offset: 0;
+}
+
+.button-book:focus {
+outline: 0;
+outline-offset: 0;
 }
 
 /*заголовки с названиями гостиниц*/
@@ -728,7 +760,7 @@ display: none;
 
 /* вспомогательная раскраска блоков
 body > * { background-color: rgba(255,0,0,0.5); } body > * > * { background-color: rgba(255,255,0,0.5); } body > * > * > * { background-color: rgba(0,255,0,0.5); } body > * > * > * { background-color: rgba(255,0,255,0.5); }
-*/
+
 
 body > * {
   outline: 1px solid red;
@@ -745,6 +777,7 @@ body > * > * > * {
 body > * > * > * {
   outline: 1px solid rgb(255, 0, 149);
 }
+*/
 
 .container {
   width: 1200px;
@@ -784,7 +817,7 @@ img {
 }
 
 .main-navigation-list li:nth-of-type(3) {
-  padding-left: 77px;
+  padding-left: 78px;
   padding-right: 71px;
 }
 
@@ -845,7 +878,7 @@ img {
   display: block;
   width: 490px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 26px;
 }
 
 .intro, .visit {
@@ -889,6 +922,7 @@ img {
 
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 
@@ -916,10 +950,17 @@ img {
   background-color: #ffffff;
 }
 
-.feature-container {
-    width: 400px;
+.feature-container:first-of-type {
+    width: 280px;
+    margin-left: 64px;
+    margin-top: 30px;
 }
 
+.feature-container:first-of-type .features-title-white {
+  width:150px;
+  display: block;
+  margin-left: 60px;
+}
 
 .features-sub-list li:first-of-type::before {
   content: "";
