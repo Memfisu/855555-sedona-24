@@ -435,7 +435,7 @@ display: none;
 }
 
 .price-controls label {
-  display: inline-block;
+  display: inline;
 
   font-size: 14px;
   line-height: 38px;
@@ -492,6 +492,7 @@ display: none;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
+  padding: 2px;
 }
 
 .range-toggle:hover {
@@ -840,7 +841,7 @@ img {
 /*фоновая фотография и полигон*/
 .intro-image-wrapper {
   background: url("../img/svg/main-polygon.svg"), url("../img/jpg/background-photo.jpg");
-  background-position: 50% 452px, center;
+  background-position: 50% 452px, 50% -55px;
   background-repeat: no-repeat;
   background-color: #d5b8a9;
   min-height: 773px;
@@ -1120,8 +1121,17 @@ img {
   padding-right: 20px;
 }
 
+.date {
+  background-image: url("../img/svg/icon-calendar-calm.svg");
+  background-position: 316px center;
+  background-repeat: no-repeat;
+}
+
+.criterion-counts {
+  display: flex;
+}
+
 .criterion-counts p{
-  display: inline-block;
   margin-top: 0;
   margin-bottom: 50px;
   margin-left: 55px;
@@ -1233,9 +1243,7 @@ img {
 
 
 /*звезда - не повторяется, регулировать количество шириной*/
-.catalog-raiting-container .star {
-  content: "";
-
+.star {
   background-image: url("../img/svg/icon-star.svg");
   background-position: 0 0;
   background-repeat: repeat-x;
@@ -1280,6 +1288,28 @@ img {
   margin-right: 30px;
 }
 
+.map {
+  width: 1200px;
+  height: 594px;
+  border: none;
+}
+
+
 .modal-show {
   display: none;
+
+  animation: lift-down 2s;
+}
+
+
+@keyframes lift-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(250px);
+  }
+  100% {
+    transform: translateY(300px);
+  }
 }
