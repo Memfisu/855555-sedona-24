@@ -95,7 +95,7 @@
         <p class="sort-name">Сортировка:</p>
         <ul class="sort-criteries">
           <li class="sort-list">
-            <a class="sort-criterion" href="#">по цене</a>
+            <a class="sort-criterion sort-item-active" href="#">по цене</a>
           </li>
           <li class="sort-list">
             <a class="sort-criterion" href="#">по типу</a>
@@ -106,12 +106,16 @@
         </ul>
         <ul class="sort-orders">
           <li class="sort-order">
-            <a class="sort-criterion" href="#" aria-label="Сортировка по возрастанию"><img src="/img/svg/icon-sort-up.svg"
-                width="11" height="10" alt="Треугольник, направленный вверх"></a>
+            <a class="sort-order-arrow" href="#" aria-label="Сортировка по возрастанию">
+              <svg width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#cacaca" d="M5.5 0L0 10h11z" /></svg>
+            </a>
           </li>
           <li class="sort-order">
-            <a class="sort-criterion" href="#" aria-label="Сортировка по убыванию"><img src="/img/svg/icon-sort-down.svg"
-                width="11" height="10" alt="Треугольник, направленный вниз"></a>
+            <a class="sort-order-arrow sort-order-active" href="#" aria-label="Сортировка по убыванию">
+              <svg width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#cacaca" d="M5.5 10L0 0h11" /></svg>
+            </a>
           </li>
         </ul>
       </section>

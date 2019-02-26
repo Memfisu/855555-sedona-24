@@ -393,6 +393,16 @@ display: none;
   background-position: 0 0;
 }
 
+/* для заблокированных чекбоксов*/
+.filter-input-checkbox:disabled + label::before {
+  border: 2px solid #6a6a6a;
+}
+
+.filter-input-checkbox:disabled + label::after {
+  border: 2px solid #6a6a6a;
+  background-image: url("../img/svg/checkbox-blocked.svg");
+}
+
 .filter-cost-container {
   color: #ffffff;
   margin-left: 364px;
@@ -556,20 +566,28 @@ display: none;
   list-style: none;
 }
 
-.sort-list a:active {
-  font-size: 12px;
-  line-height: 18px;
-  text-align: left;
-  color: #81b3d2;
-  border-bottom: none;
-}
 
-.sort-list a {
+.sort-list .sort-criterion {
   font-size: 12px;
   line-height: 18px;
   text-align: left;
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dashed #81b3d2; 
+}
+
+.sort-list .sort-criterion:hover {
+  color: #81b3d2;
+}
+
+.sort-list .sort-criterion:active {
+  color: #000000;
+  border-bottom: none;
+}
+
+/* класс для выбранного критерия сортировки */
+.sort-criterion.sort-item-active {
+  color: #81b3d2;
+  border-bottom: none;
 }
 
 /*изменить цвет у ссылки на текущую страницу*/
@@ -580,6 +598,19 @@ display: none;
 .sort-order {
   list-style: none;
 }
+
+.sort-order-arrow:hover path {
+  fill: #000000;
+}
+
+.sort-order-arrow:active path {
+  fill: #81b3d2;
+}
+
+.sort-order-arrow.sort-order-active path{
+  fill: #81b3d2;
+}
+
 
 /*ссылки на соцсети*/
 .social-button {
@@ -1127,20 +1158,38 @@ img {
   background-repeat: no-repeat;
 }
 
+
+
 .criterion-counts {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .criterion-counts p{
   margin-top: 0;
   margin-bottom: 50px;
   margin-left: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .criterion-counts input {
-  width: 113px;
+  width: 38px;
   box-sizing: border-box;
 }
+
+.button-count {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin: 0 0;
+  border: none;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
 
 .visit {
   margin: 0 auto;
