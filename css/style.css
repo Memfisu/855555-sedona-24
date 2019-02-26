@@ -1135,6 +1135,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .search-criterion input {
@@ -1152,13 +1153,22 @@ img {
   padding-right: 20px;
 }
 
-.date {
-  background-image: url("../img/svg/icon-calendar-calm.svg");
-  background-position: 316px center;
-  background-repeat: no-repeat;
+.calendar {
+  position: absolute;
+  top: 8px;
+  left: 480px;
+  cursor: pointer;
 }
 
+.calendar:hover path,
+.calendar:hover rect {
+  fill: #000000;
+}
 
+.calendar:active path,
+.calendar:active rect {
+  fill: #81b3d2;
+}
 
 .criterion-counts {
   display: flex;
@@ -1166,7 +1176,7 @@ img {
   align-items: center;
 }
 
-.criterion-counts p{
+.criterion-counts p {
   margin-top: 0;
   margin-bottom: 50px;
   margin-left: 55px;
@@ -1177,6 +1187,7 @@ img {
 
 .criterion-counts input {
   width: 38px;
+  height: 38px;
   box-sizing: border-box;
 }
 
@@ -1188,8 +1199,27 @@ img {
   border: none;
   background-color: #f2f2f2;
   position: relative;
+
+  font-weight: bold;
+  font-size: 26px;
+  color: #a9a9a9;
+
+  cursor: pointer;
+  outline: 0;
+  outline-offset: 0;
 }
 
+.button-count:hover {
+  color: #000000;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.button-count:active {
+  color: #81b3d2;
+  outline: 0;
+  outline-offset: 0;
+}
 
 .visit {
   margin: 0 auto;
@@ -1299,7 +1329,21 @@ img {
   background-size: contain;
   background-color: #ffffff;
   margin-top: 31px;
-  margin-bottom: 47px;
+  margin-bottom: 27px;
+  height: 18px;
+  width: 17px;
+}
+
+.two-star {
+  width: 36px;
+}
+
+.three-star {
+  width: 56px;
+}
+
+.four-star {
+  width: 76px;
 }
 
 .catalog-raiting-container .raiting {
