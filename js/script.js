@@ -1,5 +1,5 @@
 var link = document.querySelector(".button-search-change");
-    var popup = document.querySelector(".modal-accomodation-search");
+    var popup = document.querySelector(".search-form");
     var datein = popup.querySelector("[name=date-in]");
     var dateout = popup.querySelector("[name=date-out]");
     var adults = popup.querySelector("[name=adults]");
@@ -19,7 +19,6 @@ var link = document.querySelector(".button-search-change");
     link.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.toggle("modal-show");
-
       if (storage) {
         adults.value = storage;
         children.value = storage;

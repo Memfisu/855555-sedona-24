@@ -65,11 +65,6 @@ a {
   padding: 0;
 }
 
-.social {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 .catalog-info {
   list-style: none;
@@ -309,7 +304,7 @@ a {
 /*размытый фон*/
 .search {
   background: url("../img/jpg/background-photo-blur.jpg");
-  background-position: center;
+  background-position: 50% -55px;
   background-repeat: no-repeat;
   background-color: #d5b8a9;
 }
@@ -613,32 +608,50 @@ display: none;
 
 
 /*ссылки на соцсети*/
+.social {
+  list-style: none;
+  display: flex;
+  width: 160px;
+  margin: 0 auto;
+  min-height: 48px;
+  width: 200px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  padding-left: 0;
+}
+
 .social-button {
   vertical-align: middle;
   border: none;
   background-color: #81b3d2;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 46px;
   height: 48px;
+  margin-right: 6px;
+  display: flex;
+
 }
 
+.social-button a {
+  width: 46px;
+  height: 48px;
+  vertical-align: middle;
+  border: none;
+  background-color: #81b3d2;
+
+}
+
+
 /*ссылки на соцсети - наведение*/
-.social-button:hover {
+.social-button a:hover {
   background-color: #669ec0;
 }
 
 /*ссылки на соцсети - нажатие*/
-.social-button:active {
-  background-color: #5496bd;
-}
-
-
 .social-button a:active {
   background-color: #5496bd;
 }
+
 
 .social-button a:hover path{
   opacity: 0.3;
@@ -917,24 +930,16 @@ img {
   background-color: #ffffff;
 }
 
-.visit-container {
+.visit-title,
+.visit-text {
   background-color: #ffffff;
-  padding-bottom: 112px;
   padding-top: 25px;
   width: 576px;
   margin: 0 auto;
 }
 
-.social {
-  display: flex;
-  width: 160px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-  min-height: 100px;
-  width: 150px;
-  padding-top: 36px;
-  padding-bottom: 36px;
+.visit-text {
+  margin-bottom: 46px;
 }
 
 .features-list {
@@ -1118,16 +1123,19 @@ img {
   fill: #bdbbbc;
 }
 
-.accomodation-search {
+.search-form {
   background-color: #ffffff;
 
-  min-height: 481px;
+  min-height: 395px;
   width: 568px;
 
   position: absolute;
-  margin-top: -87px;
+  padding-top: 55px;
+  margin-bottom: 78px;
   left: 50%;
   margin-left: -284px;
+
+  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .search-criterion {
@@ -1226,12 +1234,12 @@ img {
   position: relative;
 }
 
-.accomodation-search .button-search {
-  width: 100%;
+.visit .button-search {
+  width: 568px;
   display: block;
+  margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 29px;
-  margin-bottom: 52px;
 }
 
 .button-search.button {
@@ -1378,7 +1386,8 @@ img {
 }
 
 .hotel-description span {
-  margin-right: 30px;
+  display: inline-block;
+  min-width: 116px;
 }
 
 .map {
@@ -1391,18 +1400,23 @@ img {
 .modal-show {
   display: none;
 
-  animation: lift-down 2s;
+  animation: lift-down 10s;
 }
 
 
 @keyframes lift-down {
   0% {
-    transform: translateY(0px);
+    transform: translateY(-2000px);
   }
-  50% {
-    transform: translateY(250px);
+
+  70% {
+    transform: translateY(30px);
   }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
   100% {
-    transform: translateY(300px);
+    transform: translateY(0);
   }
-}
