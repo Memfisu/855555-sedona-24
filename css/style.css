@@ -162,7 +162,7 @@ a {
   text-align: center;
   color: #000000;
 
-  margin-top: 20px;
+  margin-top: 23px;
   margin-bottom: 22px;
 }
 
@@ -318,7 +318,7 @@ a {
 
 .filter label {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 21px;
   text-align: left;
   color: #ffffff;
@@ -332,6 +332,10 @@ a {
     position: relative;
 }
 
+.filter-checkboxes li:last-of-type {
+  margin-bottom: 15px;
+}
+
 /*критерии фильтрации*/
 .filter-checkboxes {
   border: none;
@@ -340,7 +344,6 @@ a {
 .filter-checkboxes fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
 }
 
 .filter-checkbox label {
@@ -398,10 +401,12 @@ display: none;
 
 .filter-cost-container {
   color: #ffffff;
-  margin-left: 364px;
+  margin-left: 304px;
   margin-top: 30px;
-  width: 330px;
+  margin-bottom: 0;
+  width: 314px;
   text-transform: uppercase;
+  margin-right: auto;
 }
 
 .filter-cost-title {
@@ -452,6 +457,7 @@ display: none;
 .price-controls .max-price {
   width: 90px;
   padding-left: 65px;
+  padding-right: 10px;
 }
 
 .price-controls input {
@@ -460,6 +466,7 @@ display: none;
 
   color: inherit;
   font: inherit;
+  vertical-align: top;
 
   background: none;
   border: none;
@@ -513,7 +520,7 @@ display: none;
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 33px;
 
   font-size: 14px;
   line-height: 20px;
@@ -524,6 +531,9 @@ display: none;
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
+
+  box-sizing: border-box;
+  min-width: 133px;
 }
 
 .btn-transparent:hover {
@@ -908,8 +918,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: -265px;
-  min-height: 200px;
-  
+  min-height: 216px;
 }
 
 .intro-title {
@@ -966,6 +975,8 @@ img {
 
   display: flex;
   flex-direction: row;
+
+  justify-content: space-between;
 }
 
 .feature-item:last-of-type {
@@ -1009,14 +1020,16 @@ img {
 
 .feature-container:first-of-type .features-title-white {
   width: 150px;
+  margin-top: 25px;
+  margin-left: 10px;
   margin-bottom: 10px;
   display: inline-block;
+  flex-wrap: wrap;
 }
 
 
 .feature-container .feature-content {
   margin-bottom: 20px;
-  margin-right: 7px;
 }
 
 .features-sub-list li:first-of-type::before {
@@ -1080,7 +1093,6 @@ img {
   width: 400px;
   
   flex-direction: column;
-  justify-content: space-between;
 
   background-color: #eeeeee;
 }
@@ -1094,9 +1106,9 @@ img {
 }
 
 .features-group .feature-content {
-  margin-top: 0px;
   width: 230px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-image {
@@ -1175,8 +1187,8 @@ img {
   flex-basis: 478px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
   position: relative;
+  margin-top: 0px;
 }
 
 .search-criterion input {
@@ -1263,6 +1275,7 @@ img {
 }
 
 .visit {
+  padding-top: 25px;
   margin: 0 auto;
   position: relative;
 }
@@ -1290,7 +1303,8 @@ img {
 
 .filter-checkboxes {
   margin-top: 27px;
-  margin-left: 76px;
+  margin-left: 64px;
+  margin-right: 35px;
 }
 
 .filter-checkboxes ul {
@@ -1302,6 +1316,7 @@ img {
   margin-top: 17px;
 }
 
+
 .sort {
   display: flex;
   flex-direction: row;
@@ -1310,7 +1325,7 @@ img {
 
 .sort .sort-results {
   margin-left: 72px;
-  margin-top: 31px;
+  margin-top: 30px;
 }
 
 .sort .sort-name {
@@ -1320,15 +1335,15 @@ img {
 
 .sort .sort-criteries {
   display: flex;
-  margin-top: 27px;
+  margin-top: 29px;
   width: 250px;
   justify-content: space-between;
 }
 
 .sort .sort-orders {
   display: flex;
-  margin-top: 39px;
-  margin-left: 493px;
+  margin-top: 29px;
+  margin-left: 490px;
 }
 
 .sort-orders li {
@@ -1351,7 +1366,7 @@ img {
 .catalog-info-container {
   min-width: 260px;
   margin-left: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 
@@ -1433,23 +1448,20 @@ img {
 .modal-show {
   display: none;
 
-  animation: lift-down 10s;
+  animation: lift-down 3s;
+  animation-fill-mode: forwards;
 }
 
 
 @keyframes lift-down {
   0% {
-    transform: translateY(-2000px);
+    transform: translateY(1083px);
   }
 
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
+  50% {
+    transform: translateY(2083px);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(2169);
   }
