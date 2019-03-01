@@ -634,12 +634,16 @@ display: none;
   width: 46px;
   height: 48px;
   margin-right: 6px;
-  display: flex;
+  display: block;
 }
 
 .social-button a {
+  display: flex;
   width: 46px;
   height: 48px;
+
+  justify-content: center;
+  align-items: center;
 
   border: none;
   background-color: #81b3d2;
@@ -647,9 +651,6 @@ display: none;
 
 .social-button svg {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
 }
 
 /*ссылки на соцсети - наведение*/
@@ -954,6 +955,7 @@ img {
 
 .visit-title {
   margin-top: 0;
+  margin-bottom: 25px;
   padding-top: 50px;
 }
 
@@ -1190,7 +1192,6 @@ img {
   width: 568px;
 
   position: absolute;
-  padding-top: 55px;
   margin-bottom: 78px;
   left: 50%;
   margin-left: -284px;
@@ -1198,12 +1199,18 @@ img {
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
-.search-criterion {
-  flex-basis: 478px;
+.search-criterion:first-of-type {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  margin-top: 0px;
+  margin-top: 55px;
+}
+
+.search-criterion:nth-of-type(2) {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 25px;
 }
 
 .search-criterion input {
@@ -1218,7 +1225,7 @@ img {
 }
 
 .search-criterion label {
-  padding-right: 20px;
+  padding-right: 21px;
 }
 
 .calendar {
@@ -1240,17 +1247,12 @@ img {
 
 .criterion-counts {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .criterion-counts p {
-  margin-top: 0;
-  margin-bottom: 50px;
-  margin-left: 55px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .criterion-counts input {
@@ -1306,7 +1308,8 @@ img {
   width: 458px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0;
+  margin-bottom: 55px;
+  margin-top: 54px;
   padding-top: 15px;
   padding-bottom: 18px;
 }
