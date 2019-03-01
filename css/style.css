@@ -937,7 +937,7 @@ img {
   margin: 0;
   margin-left: 345px;
   margin-right: 356px;
-  padding-top: 26px;
+  margin-top: 25px;
 }
 
 .intro, .visit {
@@ -947,9 +947,14 @@ img {
 .visit-title,
 .visit-text {
   background-color: #ffffff;
-  padding-top: 25px;
   width: 576px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visit-title {
+  margin-top: 0;
+  padding-top: 50px;
 }
 
 .visit-text {
@@ -1004,33 +1009,7 @@ img {
   background-color: #ffffff;
 }
 
-.feature-container:first-of-type {
-    width: 280px;
-    margin-left: 55px;
-    margin-right: 45px;
-    margin-top: 25px;
-}
 
-.feature-container:nth-of-type(2) {
-  width: 280px;
-  margin-left: 60px;
-  margin-right: 45px;
-  margin-top: 25px;
-}
-
-.feature-container:first-of-type .features-title-white {
-  width: 150px;
-  margin-top: 25px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  display: inline-block;
-  flex-wrap: wrap;
-}
-
-
-.feature-container .feature-content {
-  margin-bottom: 20px;
-}
 
 .features-sub-list li:first-of-type::before {
   content: "";
@@ -1091,24 +1070,60 @@ img {
 
 .features-group .feature-item {
   width: 400px;
-  
-  flex-direction: column;
-
   background-color: #eeeeee;
 }
 
-.features-title {
-  margin-top: 47px;
-  margin-left: 140px;
-  margin-right: 140px;
 
-  width: 120px;
-}
-
-.features-group .feature-content {
-  width: 230px;
+.feature-container:first-of-type {
+  min-height: 142px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 29px;
+  margin-bottom: 25px;
+}
+
+.feature-container {
+  min-height: 142px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 49px;
+}
+
+.feature-container:nth-of-type(2) {
+  margin-top: 25px;
+}
+
+.feature-container .features-title-white {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-container .feature-content {
+  padding-top: 5px;
+}
+
+.features-group .feature-group-container {
+  width: 268px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26px;
+
+  min-height: 142px;
+}
+
+.feature-group-container .features-title {
+  width: 160px;
+  padding-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-group-container .feature-content {
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .feature-image {
@@ -1275,7 +1290,6 @@ img {
 }
 
 .visit {
-  padding-top: 25px;
   margin: 0 auto;
   position: relative;
 }
