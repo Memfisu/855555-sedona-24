@@ -19,6 +19,7 @@ var link = document.querySelector(".button-search-change");
     link.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.toggle("modal-show");
+      popup.classList.toggle("animation-show");
       if (storage) {
         adults.value = storage;
         children.value = storage;
