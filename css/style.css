@@ -1613,11 +1613,18 @@ img {
   list-style: none;
 }
 
-.map {
+.map-container {
   background-image: url("../img/jpg/picture-map.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  
+  background-size: cover;
+
+  width: 1200px;
+  height: 604px;
+  border: none;
+}
+
+.map {
   width: 1200px;
   height: 594px;
   border: none;
