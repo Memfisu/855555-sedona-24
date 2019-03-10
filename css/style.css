@@ -495,7 +495,14 @@ img {
   text-transform: uppercase;
 }
 
-.search-criterion input[placeholder] {
+.search-criterion input {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+  text-transform: uppercase;
+
   padding-top: 13px;
   padding-bottom: 12px;
   padding-left: 13px;
@@ -720,6 +727,10 @@ img {
 
   margin-bottom: 20px;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
   position: relative;
 }
 
@@ -744,19 +755,19 @@ img {
   font-size: 14px;
   font-weight: normal;
   line-height: 38px;
+  text-align: center;
 
-  display: inline;
+  width: 50%;
 
   cursor: pointer;
-  vertical-align: top;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-
+  /*
   padding-left: 65px;
   padding-right: 10px;
+  */
 }
 
 .price-controls input {
@@ -1367,7 +1378,7 @@ img {
 
   left: 50%;
 
-  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .calendar {
@@ -1498,23 +1509,23 @@ img {
   margin-left: 40px;
 }
 
-.sort .sort-criteries {
+.sort .sort-criteria {
   margin-top: 29px;
   margin-bottom: 30px;
-  padding: 0px;
+  padding: 0;
 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  flex-grow: 1;
 }
 
 .sort .sort-orders {
   margin-top: 29px;
+  margin-left: auto;
   margin-right: 73px;
-  padding: 0px;
+  padding: 0;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1529,7 +1540,7 @@ img {
   min-width: 260px;
 }
 
-.catalog-raiting-container {
+.catalog-rating-container {
   margin-left: auto;
   margin-right: 73px;
   margin-bottom: 30px;
@@ -1544,7 +1555,7 @@ img {
   flex-direction: column;
 }
 
-.catalog-raiting-container .raiting {
+.catalog-rating-container .rating {
   background-color: #f2f2f2;
 
   width: 110px;
@@ -1653,8 +1664,8 @@ img {
   }
 
   100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -1665,8 +1676,8 @@ img {
   }
 
   100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -1674,8 +1685,8 @@ img {
 
   0%,
   100% {
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 
   10%,
@@ -1700,8 +1711,8 @@ img {
 
   0%,
   100% {
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 
   10%,
