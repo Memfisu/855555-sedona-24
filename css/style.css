@@ -451,7 +451,7 @@ img {
 
   padding-top: 10px;
   padding-bottom: 12px;
-  padding-left: 13px;
+  padding-left: 5px;
 
   border: 2px solid transparent;
   outline: 0;
@@ -488,6 +488,7 @@ img {
   text-align: left;
   color: #000000;
   text-transform: uppercase;
+
   opacity: 1.0;
 }
 
@@ -499,8 +500,16 @@ img {
   text-transform: uppercase;
 }
 
+.dates label {
+  width: 120px;
+  
+  display: inline-block;
+
+  vertical-align: middle
+}
+
 .search-criterion label {
-  padding-right: 18px;
+  padding-right: 16px;
 }
 
 .search-criterion:first-of-type {
@@ -1425,11 +1434,11 @@ img {
 }
 
 .counts:first-of-type label {
-  margin-right: 20px;
+  margin-right: 27px;
 }
 
 .counts:last-of-type {
-  margin-right: 55px;
+  margin-right: 50px;
 }
 
 .button-count {
@@ -1445,7 +1454,7 @@ img {
   outline: 0;
   outline-offset: 0;
 
-  margin: 0 0;
+  margin: 0;
   padding: 0;
 
   position: relative;
