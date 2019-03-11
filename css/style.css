@@ -439,9 +439,20 @@ img {
 }
 
 .search-criterion input {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  color: #000000;
+  text-transform: uppercase;
+  
   background-color: #f2f2f2;
 
   width: 346px;
+
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left: 13px;
+
   border: 2px solid transparent;
   outline: 0;
   box-sizing: border-box;
@@ -477,14 +488,7 @@ img {
   text-align: left;
   color: #000000;
   text-transform: uppercase;
-}
-
-.search-criterion input:-ms-input-placeholder {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: left;
-  color: #000000;
-  text-transform: uppercase;
+  opacity: 1.0;
 }
 
 .search-criterion input::placeholder {
@@ -495,20 +499,8 @@ img {
   text-transform: uppercase;
 }
 
-.search-criterion input {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: left;
-  color: #000000;
-  text-transform: uppercase;
-
-  padding-top: 10px;
-  padding-bottom: 12px;
-  padding-left: 13px;
-}
-
 .search-criterion label {
-  padding-right: 21px;
+  padding-right: 18px;
 }
 
 .search-criterion:first-of-type {
@@ -520,7 +512,7 @@ img {
 }
 
 .search-criterion:nth-of-type(2) {
-  margin-top: 23px;
+  margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
 
@@ -1380,8 +1372,8 @@ img {
 .calendar {
   position: absolute;
 
-  top: 8px;
-  left: 480px;
+  top: 11px;
+  left: 483px;
 
   cursor: pointer;
 }
